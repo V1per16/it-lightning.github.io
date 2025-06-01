@@ -1,0 +1,17 @@
+
+#about-us-section {
+    background-color: rgb(18, 18, 18);
+    padding: 3rem;
+}
+
+#about-us-container {
+    padding: 1.5rem;
+    border-radius: 20px;
+    background-color: rgb(55, 65, 81);
+    text-align: center;
+}
+
+#about-us-container h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
