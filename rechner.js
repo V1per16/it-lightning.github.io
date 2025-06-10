@@ -77,24 +77,24 @@ document.addEventListener('DOMContentLoaded', () => {
       outputList.innerHTML = '';
 
       const liBase = document.createElement('li');
-      liBase.textContent = `Grundpaket: ${pkgKey.charAt(0).toUpperCase() + pkgKey.slice(1)} - ${basePrice}€ (inkl. ${basePages} Seiten, ${basePics} Bilder)`;
+      liBase.textContent = `Grundpaket: ${pkgKey.charAt(0).toUpperCase() + pkgKey.slice(1)} - ${basePrice}CHF (inkl. ${basePages} Seiten, ${basePics} Bilder)`;
       outputList.appendChild(liBase);
 
       const liPages = document.createElement('li');
-      liPages.textContent = `Zusätzliche Seiten (${extraPages} x ${pricePerPage}€): ${pagesPrice}€`;
+      liPages.textContent = `Zusätzliche Seiten (${extraPages} x ${pricePerPage}CHF): ${pagesPrice}CHF`;
       outputList.appendChild(liPages);
 
       const liPics = document.createElement('li');
-      liPics.textContent = `Zusätzliche Bilder (${extraPics} x ${pricePerPicture}€): ${picturesPrice}€`;
+      liPics.textContent = `Zusätzliche Bilder (${extraPics} x ${pricePerPicture}CHF): ${picturesPrice}CHF`;
       outputList.appendChild(liPics);
 
       checkedBoxes.forEach(cb => {
         const liCb = document.createElement('li');
-        liCb.textContent = `${cb.name}: ${cb.price}€`;
+        liCb.textContent = `${cb.name}: ${cb.price}CHF`;
         outputList.appendChild(liCb);
       });
 
-      totalPriceHeading.textContent = `Gesamtpreis: ${totalPrice}€`;
+      totalPriceHeading.textContent = `Gesamtpreis: ${totalPrice}CHF`;
     } else {
       disableInputs();
       outputList.innerHTML = '';
