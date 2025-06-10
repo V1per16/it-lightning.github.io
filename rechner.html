@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Preis Rechner</title>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="rechner.css">
+    </head>
+    <body class="site-body">
+        <!-- Navigation -->
+        <nav class="nav-bar">
+            <div class="nav-container">
+                <div class="nav-logo"><a href="index.html">IT-Lightning</a></div>
+                <!-- Desktop Navigation -->
+                <div class="nav-desktop">
+                    <a href="index.html" class="nav-item">Home</a>
+                    <div class="nav-item dropdown">
+                        <span class="nav-link">Services</span>
+                        <div class="dropdown-menu">
+                            <a href="it-support.html" class="dropdown-item">IT-Support</a>
+                            <a href="webdev.html" class="dropdown-item">Webseiten</a>
+                        </div>
+                    </div>
+                    <a href="about.html" class="nav-item">About</a>
+                    <a href="kontakt.html" class="nav-item">Contact</a>
+                </div>
+                <!-- Hamburger Button -->
+                <button id="hamburger-btn" class="hamburger-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="mobile-menu hidden">
+                <a href="index.html" class="nav-item-mobile">Home</a>
+                <div class="nav-item-mobile dropdown">
+                    <span class="nav-link-mobile dropdown-toggle">Services</span>
+                    <div class="dropdown-menu hidden">
+                        <a href="it-support.html" class="dropdown-item">IT-Support</a>
+                        <a href="webdev.html" class="dropdown-item">Web</a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-item-mobile">About</a>
+                <a href="kontakt.html" class="nav-item-mobile">Contact</a>
+            </div>
+        </nav>
+
+        <section id="calc-in-section">
+            <div id="calc-in-title">
+                <h2>Preis Rechner</h2>
+                <p>Eine Methode um den ungefähren Preis deines Projekts zu berechnen.*</p>
+            </div>
+
+            <div id="in-out-container">
+                <div id="input-div">
+                    <h3>Grundpacket</h3>
+                    <select name="package" id="package" style="color: black;">
+                        <option value="select">Wählen</option>
+                        <option value="lite">Lite</option>
+                        <option value="basic">Basic</option>
+                        <option value="premium">Premium</option>
+                        <option value="programmiert">Programmiert</option>
+                    </select>
+
+                    <h3>Anzahl zusätzliche Seiten</h3>
+                    <output id="pages_val">0</output> Seiten total
+                    <input type="range" name="pages" class="slider" id="pages" max="10" min="0" value="0" step="1" oninput="pages_val.value = this.value">
+
+                    <h3>Anzahl zusätzliche Bilder</h3>
+                    <output id="pic_val">0</output> Bilder total
+                    <input type="range" name="pictures" class="slider" id="pictures" max="15" min="0" value="0" step="1" oninput="pic_val.value = this.value">
+
+                    <div class="checkboxes-container">
+                        <label class="container">Online Shop
+                            <input type="checkbox" name="shop" class="checkbox" id="shop">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">Zahlungs-Integration
+                            <input type="checkbox" name="payment" id="payment">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">Blog
+                            <input type="checkbox" name="blog" id="blog">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">Gallerie
+                            <input type="checkbox" name="gallery" id="gallery">
+                            <span class="checkmark"></span>
+                        </label>                        
+
+                        <label class="container">Kunden-/Mitgliederbereich
+                            <input type="checkbox" name="sections" id="sections">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">Hosting & Domain
+                            <input type="checkbox" name="hosting" id="hosting">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">SEO-Optimierung
+                            <input type="checkbox" name="seo" id="seo">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">Express Lieferung
+                            <input type="checkbox" name="express" id="express">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div id="output-div">
+                    <h2>Berechneter Preis:</h2>
+
+                    <h5>Gewählt:</h5>
+                    <ul id="output-list">
+                        <li></li>
+                    </ul>
+
+                    <h4>Gesamtpreis:</h4>
+                </div>
+
+                <div id="calculator-disclaimer">
+                    <p>*Dieser Preisrechner dient nur zur ungefähren Einschätzung deiner Projektkosten. Der absolute Preis wird nach Absprache festgelegt und kann je nach Anforderungen vom hier berechneten Preis variieren.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2025 IT-Lightning. All rights reserved.</p>
+        </footer>
+
+        <script src="rechner.js"></script>
+    </body>
+</html>

@@ -1,0 +1,179 @@
+
+#calc-in-section {
+  background-color: #1f2937; /* dark slate */
+  color: #e5e7eb; /* light gray */
+  padding: 3rem 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 6rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+#calc-in-title h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgb(59, 130, 246);
+  margin-bottom: 0.25rem;
+  text-align: center;
+}
+
+#calc-in-title p {
+  font-size: 1.125rem;
+  color: #9ca3af;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#in-out-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+#input-div, #output-div {
+  background-color: #374151;
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  flex: 1 1 350px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#input-div h3 {
+  color: rgb(125, 163, 225);
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+select#package {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #111827;
+  background-color: #dedede;
+  cursor: pointer;
+}
+
+input[type="range"].slider {
+  width: 100%;
+  margin: 0.25rem 0 1rem 0;
+}
+
+output {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #d1d5db;
+  text-align: center;
+}
+
+.checkboxes-container {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.container {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 1rem;
+  color: #d1d5db;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #4b5563;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #6b7280; /* gray-500 */
+}
+
+.container input:checked ~ .checkmark {
+  background-color: rgb(59, 130, 246);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0px 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+#output-div h2 {
+  color: rgb(82, 139, 231);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#output-div h5 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #cbd5e1;
+}
+
+#output-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+  color: #e0e7ff;
+  min-height: 80px;
+}
+
+#output-list li {
+  padding: 0.3rem 0;
+  border-bottom: 1px solid #4b5563;
+}
+
+#output-div h4 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgb(82, 139, 231);
+  border-top: 2px solid rgb(59, 130, 246);
+  padding-top: 0.75rem;
+}
+
+#calculator-disclaimer {
+  color: #8b8e94;
+  max-width: 1200px;
+  text-align: center;
+  font-size: 18px;
+}

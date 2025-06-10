@@ -1,0 +1,138 @@
+
+.angebote-section {
+    padding: 4rem 0;
+    background-color: rgb(31, 41, 55);
+}
+
+.angebote-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+    padding: 1rem;
+}
+
+.comparison-table, .addon-table, .custom-code-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgb(55, 65, 81);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.comparison-table th,
+.addon-table th,
+.custom-code-table th {
+    background-color: rgb(59, 130, 246);
+    color: white;
+    font-weight: 600;
+    padding: 1rem;
+    text-align: center;
+}
+
+.comparison-table td,
+.addon-table td,
+.custom-code-table td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.table-row:nth-child(odd) {
+    background-color: rgb(45, 55, 71);
+}
+
+.table-row:hover {
+    background-color: rgb(75, 85, 101);
+    transition: background-color 0.3s ease;
+}
+
+.table-header {
+    background-color: rgb(59, 130, 246);
+    color: white;
+    font-weight: 600;
+    padding: 1rem;
+    text-align: center;
+}
+
+.table-cell {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.comparison-table .table-cell:first-child,
+.addon-table .table-cell:first-child,
+.custom-code-table .table-cell:first-child {
+    font-weight: 500;
+    color: rgb(209, 213, 219);
+}
+
+@media (max-width: 768px) {
+    .comparison-table,
+    .addon-table,
+    .custom-code-table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .comparison-table th,
+    .addon-table th,
+    .custom-code-table th,
+    .comparison-table td,
+    .addon-table td,
+    .custom-code-table td {
+        min-width: 120px;
+    }
+}
+
+.buttons-top {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 400px)  {
+    .buttons-top {
+        display: block;
+    }
+
+    .buttons-top a {
+        margin-bottom: 1rem;
+    }
+}
+
+.check-mark {
+    color: rgb(52, 178, 51);
+    font-weight: 700;
+}
+
+.cross-mark {
+    color: rgb(207, 16, 32);
+    font-weight: 700;
+}
+
+.package-button {
+    display: inline-block;
+    background-color: rgb(59, 130, 246);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.package-button:hover {
+    background-color: rgb(55, 126, 240);
+    transform: translateY(-1px);
+}
+
+.package-button:active {
+    transform: translateY(0);
+}

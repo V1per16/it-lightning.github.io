@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IT-Lightning - IT Support & Web Solutions</title>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="kontakt.css">
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    </head>
+    <body class="site-body">
+        <!-- Navigation -->
+        <nav class="nav-bar">
+            <div class="nav-container">
+                <div class="nav-logo"><a href="index.html">IT-Lightning</a></div>
+                <!-- Desktop Navigation -->
+                <div class="nav-desktop">
+                    <a href="index.html" class="nav-item">Home</a>
+                    <div class="nav-item dropdown">
+                        <span class="nav-link">Services</span>
+                        <div class="dropdown-menu">
+                            <a href="it-support.html" class="dropdown-item">IT-Support</a>
+                            <a href="webdev.html" class="dropdown-item">Webseiten</a>
+                        </div>
+                    </div>
+                    <a href="about.html" class="nav-item">About</a>
+                    <a href="kontakt.html" class="nav-item">Contact</a>
+                </div>
+                <!-- Hamburger Button -->
+                <button id="hamburger-btn" class="hamburger-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="mobile-menu hidden">
+                <a href="index.html" class="nav-item-mobile">Home</a>
+                <div class="nav-item-mobile dropdown">
+                    <span class="nav-link-mobile dropdown-toggle">Services</span>
+                    <div class="dropdown-menu hidden">
+                        <a href="it-support.html" class="dropdown-item">IT-Support</a>
+                        <a href="webdev.html" class="dropdown-item">Web</a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-item-mobile">About</a>
+                <a href="kontakt.html" class="nav-item-mobile">Contact</a>
+            </div>
+        </nav>
+
+        <section class="contact-page-section">
+            <div class="contact-form-container">
+                <h1>Kontaktiere uns</h1>
+                <form action="">
+                    <input type="text" id="fname" name="fname" placeholder="Vorname" required class="contact-input">
+                    <input type="text" id="lname" name="lname" placeholder="Nachname" required class="contact-input">
+                    <input type="email" id="email" name="email" required placeholder="Email Adresse" class="contact-input">
+                    <input type="tel" id="number" name="number" required placeholder="Telefonnummer" class="contact-input">
+                    <textarea id="message" rows="5" name="message" required placeholder="Deine Nachricht" class="contact-textarea"></textarea>
+                    <div class="captcha-wrapper"><div class="g-recaptcha" data-theme="dark" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div></div>
+                    <input type="submit" value="Absenden" class="contact-button">
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2025 IT-Lightning. All rights reserved.</p>
+        </footer>
+
+        <script src="script.js"></script>
+        <script src="kontakt.js"></script>
+    </body>
+</html>
