@@ -50,20 +50,21 @@
             </div>
         </nav>
 
-        <section class="contact-page-section">
-            <div class="contact-form-container">
-                <h1>Kontaktiere uns</h1>
-                <form action="">
-                    <input type="text" id="fname" name="fname" placeholder="Vorname" required class="contact-input">
-                    <input type="text" id="lname" name="lname" placeholder="Nachname" required class="contact-input">
-                    <input type="email" id="email" name="email" required placeholder="Email Adresse" class="contact-input">
-                    <input type="tel" id="number" name="number" required placeholder="Telefonnummer" class="contact-input">
-                    <textarea id="message" rows="5" name="message" required placeholder="Deine Nachricht" class="contact-textarea"></textarea>
-                    <div class="captcha-wrapper"><div class="g-recaptcha" data-theme="dark" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div></div>
-                    <input type="submit" value="Absenden" class="contact-button">
-                </form>
-            </div>
-        </section>
+        <div class="contact-form-container">
+            <h1>Kontaktiere uns</h1>
+            <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+                <input type="text" id="fname" name="fname" placeholder="Vorname" required class="contact-input">
+                <input type="text" id="lname" name="lname" placeholder="Nachname" required class="contact-input">
+                <input type="email" id="email" name="email" placeholder="Email Adresse" required class="contact-input">
+                <input type="tel" id="number" name="number" placeholder="Telefonnummer" required class="contact-input">
+                <textarea id="message" name="message" rows="5" placeholder="Deine Nachricht" required class="contact-textarea"></textarea>
+                <div data-netlify-recaptcha="true"></div>
+                <input type="submit" value="Absenden" class="contact-button">
+            </form>
+        </div>
+
+        <!-- Google reCAPTCHA Script -->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
         <!-- Footer -->
         <footer class="footer">
