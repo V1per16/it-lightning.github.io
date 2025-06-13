@@ -24,7 +24,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
     }
 
     // ✅ Passed all validations
-    alert("Formular erfolgreich gesendet! (Simuliert auf localhost)");
+    alert("Formular erfolgreich gesendet!");
 
     // If you had a backend, you would now POST the data using fetch()
 });
