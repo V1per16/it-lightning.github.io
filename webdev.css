@@ -1,6 +1,5 @@
-
 .angebote-section {
-    padding: 4rem 0;
+    padding: 2rem 0;
     background-color: rgb(31, 41, 55);
 }
 
@@ -8,7 +7,45 @@
     margin-left: auto;
     margin-right: auto;
     max-width: 1280px;
-    padding: 1rem;
+    padding: 0.5rem;
+}
+
+.section-title {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.buttons-top {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.package-button {
+    display: inline-block;
+    background-color: rgb(59, 130, 246);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    min-width: 140px;
+}
+
+.package-button:hover {
+    background-color: rgb(55, 126, 240);
+    transform: translateY(-2px);
+}
+
+.package-button:active {
+    transform: translateY(0);
 }
 
 .comparison-table, .addon-table, .custom-code-table {
@@ -19,24 +56,18 @@
     overflow: hidden;
     margin-bottom: 2rem;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    margin-left: auto;
-    margin-right: auto;
 }
 
-.comparison-table th,
-.addon-table th,
-.custom-code-table th {
+.comparison-table th, .addon-table th, .custom-code-table th {
     background-color: rgb(59, 130, 246);
     color: white;
     font-weight: 600;
-    padding: 1rem;
+    padding: 0.75rem;
     text-align: center;
 }
 
-.comparison-table td,
-.addon-table td,
-.custom-code-table td {
-    padding: 1rem;
+.comparison-table td, .addon-table td, .custom-code-table td {
+    padding: 0.75rem;
     text-align: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -54,14 +85,15 @@
     background-color: rgb(59, 130, 246);
     color: white;
     font-weight: 600;
-    padding: 1rem;
+    padding: 0.75rem;
     text-align: center;
 }
 
 .table-cell {
-    padding: 1rem;
+    padding: 0.75rem;
     text-align: left;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgb(209, 213, 219);
 }
 
 .comparison-table .table-cell:first-child,
@@ -71,38 +103,163 @@
     color: rgb(209, 213, 219);
 }
 
-@media (max-width: 768px) {
-    .comparison-table,
-    .addon-table,
-    .custom-code-table {
-        display: block;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .comparison-table th,
-    .addon-table th,
-    .custom-code-table th,
-    .comparison-table td,
-    .addon-table td,
-    .custom-code-table td {
-        min-width: 120px;
-    }
+/* Mobile-specific styles */
+.comparison-table-mobile, .addon-table-mobile, .custom-code-table-mobile {
+    display: none;
 }
 
-.buttons-top {
+.package-card, .addon-card, .custom-code-card {
+    background-color: rgb(55, 65, 81);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.package-title {
+    background-color: rgb(59, 130, 246);
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    border-radius: 1rem 1rem 0rem 0rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.feature-item, .addon-card, .custom-code-card {
     display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 2rem;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-@media (max-width: 400px)  {
-    .buttons-top {
+.feature-name, .addon-name, .custom-code-name {
+    font-weight: 500;
+    color: rgb(207, 210, 214);
+    margin-bottom: 0.1rem;
+}
+
+.feature-value, .addon-description, .custom-code-pro, .custom-code-con {
+    color: rgb(167, 172, 183);
+}
+
+.custom-code-pro::before {
+    content: "Pro: ";
+    color: rgb(52, 178, 51);
+    font-weight: 600;
+}
+
+.custom-code-con::before {
+    content: "Contra: ";
+    color: rgb(207, 16, 32);
+    font-weight: 600;
+}
+
+.desktop-only {
+    display: table;
+}
+
+@media (max-width: 900px) {
+    .comparison-table {
+        display: none;
+    }
+
+    .comparison-table-mobile {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+
+    .addon-table-mobile, .custom-code-table-mobile {
         display: block;
     }
 
-    .buttons-top a {
-        margin-bottom: 1rem;
+    .addon-card {
+        padding: 1rem;
+    }
+
+    .addon-name {
+        color: rgb(101, 157, 248);
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    .addon-description {
+        color: rgb(187, 198, 207);
+        font-size: 16px;
+    }
+
+    .comparison-table-mobile {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .package-button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .angebote-container {
+        padding: 0.5rem;
+    }
+
+    .custom-code-name {
+        color: rgb(101, 157, 248);
+        font-weight: 600;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 625px) {
+    .comparison-table-mobile {
+        display: block;
+    }
+
+    .feature-name {
+        margin-bottom: 0px;
+    }
+
+    .feature-item {
+        padding: 0.2rem 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .buttons-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .addon-card {
+        padding: 1rem;
+        margin: 10px;
+    }
+
+    .addon-name {
+        color: rgb(101, 157, 248);
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    .addon-description {
+        color: rgb(187, 198, 207);
+        font-size: 16px;
+    }
+
+    .package-button {
+        width: 100%;
+        max-width: 200px;
+        margin-bottom: 0.5rem;
     }
 }
 
@@ -114,25 +271,4 @@
 .cross-mark {
     color: rgb(207, 16, 32);
     font-weight: 700;
-}
-
-.package-button {
-    display: inline-block;
-    background-color: rgb(59, 130, 246);
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.package-button:hover {
-    background-color: rgb(55, 126, 240);
-    transform: translateY(-1px);
-}
-
-.package-button:active {
-    transform: translateY(0);
 }
