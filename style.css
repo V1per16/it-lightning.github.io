@@ -98,12 +98,8 @@ body {
 
 .nav-link-mobile {
     color: white;
+    font-size: 1.125rem;
     cursor: pointer;
-}
-
-.nav-item-mobile:hover {
-    color: rgb(59, 130, 246);
-    transition: color 0.2s ease-in;
 }
 
 .nav-link-mobile:hover {
@@ -111,7 +107,7 @@ body {
     transition: color 0.2s ease-in;
 }
 
-.dropdown-desktop, .dropdown-mobile {
+.dropdown {
     position: relative;
 }
 
@@ -128,7 +124,7 @@ body {
     padding: 0.5rem 0;
 }
 
-.dropdown-desktop:hover .dropdown-menu {
+.dropdown:hover .dropdown-menu {
     display: block;
 }
 
