@@ -111,7 +111,7 @@ body {
     transition: color 0.2s ease-in;
 }
 
-.dropdown {
+.dropdown-desktop, .dropdown-mobile {
     position: relative;
 }
 
@@ -128,7 +128,7 @@ body {
     padding: 0.5rem 0;
 }
 
-#dropdown-desktop:hover #dropdown-menu-desktop {
+.dropdown-desktop:hover .dropdown-menu {
     display: block;
 }
 
