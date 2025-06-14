@@ -47,11 +47,15 @@ body {
 
 .nav-link {
     color: white;
-    font-size: 1.125rem;
     cursor: pointer;
 }
 
 .nav-link:hover {
+    color: rgb(59, 130, 246);
+    transition: color 0.2s ease-in;
+}
+
+.nav-item:hover {
     color: rgb(59, 130, 246);
     transition: color 0.2s ease-in;
 }
@@ -94,8 +98,12 @@ body {
 
 .nav-link-mobile {
     color: white;
-    font-size: 1.125rem;
     cursor: pointer;
+}
+
+.nav-item-mobile:hover {
+    color: rgb(59, 130, 246);
+    transition: color 0.2s ease-in;
 }
 
 .nav-link-mobile:hover {
@@ -118,10 +126,6 @@ body {
     min-width: 10rem;
     z-index: 60;
     padding: 0.5rem 0;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
 }
 
 .dropdown-item {

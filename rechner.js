@@ -7,8 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const picturesOutput = document.getElementById('pic_val');
 
   const checkboxes = [
-    { el: document.getElementById('shop'), name: 'Online Shop', price: 500 },
-    { el: document.getElementById('payment'), name: 'Zahlungs-Integration', price: 400 },
+    { el: document.getElementById('shop'), name: 'Online Shop', price: 300 },
     { el: document.getElementById('gallery'), name: 'Gallerie', price: 200 },
     { el: document.getElementById('blog'), name: 'Blog', price: 300 },
     { el: document.getElementById('sections'), name: 'Kunden-/Mitgliederbereich', price: 350 },
