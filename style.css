@@ -123,8 +123,10 @@ body {
     padding: 0.5rem 0;
 }
 
-.dropdown:hover .dropdown-menu {
+@media (min-width: 768px) {
+    .dropdown:hover .dropdown-menu {
     display: block;
+    }
 }
 
 .dropdown-item {
