@@ -24,6 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    document.querySelectorAll('.nav-link-mobile.dropdown-toggle').forEach(el => {
+    el.addEventListener('click', () => {
+        el.classList.toggle('active');
+        });
+    });
+
     // Mobile dropdown toggle
     const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
     dropdownToggles.forEach(toggle => {
