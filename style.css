@@ -263,7 +263,7 @@ body {
 }
 
 .hero-button:hover {
-    background-color: rgb(60, 104, 226);
+    background-color: rgb(68, 113, 235);
     transition: background-color 0.3s ease;
     box-shadow: 0px 0px 10px 1px rgb(19, 74, 147);
 }
@@ -282,7 +282,7 @@ body {
 }
 
 .arrow-down-btn:hover {
-    transform: translate(-50%, 5px);
+    transform: translate(-50%, 8px);
 }
 
 .arrow-down-btn:active {
@@ -292,7 +292,7 @@ body {
 .arrow-down-icon {
     width: 3rem;
     height: 3rem;
-    fill: rgb(0, 0, 0);
+    fill: whitesmoke;
 }
 
 .services-section {
@@ -327,14 +327,16 @@ body {
 }
 
 .service-card {
+    background: rgba(55, 65, 81, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 2rem;
+    padding: 2rem;
+    min-height: 320px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    min-height: 300px;
-    padding: 1.5rem;
-    background-color: rgb(55, 65, 81);
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .service-button-container {
@@ -343,8 +345,8 @@ body {
 }
 
 .service-card:hover {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    transition: box-shadow 0.3s ease;
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px 5px rgba(79, 79, 79, 0.35);
 }
 
 .service-title {
@@ -356,20 +358,22 @@ body {
 .service-button {
     background-color: rgb(59, 130, 246);
     color: white;
-    padding: 0.75rem 0.8rem;
-    border-radius: 16px;
-    font-size: 1.125rem;
+    padding: 0.85rem 1.75rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .service-button:hover {
-    background-color: rgb(61, 107, 234);
-    transition: background-color 0.3s ease;
-    box-shadow: 0px 0px 10px 1px rgba(57, 88, 174, 0.614);
+    background-color: rgb(62, 152, 236);
+    box-shadow: 0 0 10px 2px rgba(59, 130, 246, 0.35);
 }
 
 .about-section {
     padding: 4rem 0;
-    background-color: rgb(17, 24, 39);
+    background-color: rgb(36, 45, 66);
 }
 
 .about-container {
@@ -420,19 +424,25 @@ body {
 .portfolio-item {
     position: relative;
     overflow: hidden;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.04);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.45);
 }
 
 .portfolio-image {
     width: 100%;
     height: 16rem;
     object-fit: cover;
-    transform: scale(1);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.portfolio-image:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
+.portfolio-item:hover .portfolio-image {
+    transform: scale(1.09);
 }
 
 .portfolio-overlay {
@@ -455,7 +465,9 @@ body {
 
 .portfolio-text {
     color: white;
-    font-size: 1.125rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
 }
 
 .testimonials-section {
