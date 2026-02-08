@@ -76,4 +76,8 @@ form {
     transform: scale(0.75);
     height: 59px;
   }
+
+  .contact-form-container {
+    max-width: 90%;
+  }
 }

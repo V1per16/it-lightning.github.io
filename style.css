@@ -9,33 +9,60 @@ body {
     font-family: sans-serif;
 }
 
+.nav-bar.scrolled {
+    position: fixed;           /* ← changed from absolute */
+    top: 15px;                    /* sticks to the very top */
+    left: 50%;
+    width: 80%;
+    transform: translateX(-50%);
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px 1px rgb(181, 181, 181);
+    background-color: whitesmoke;
+    z-index: 50;
+
+    opacity: 96%;
+}
+
 .nav-bar {
     position: fixed;
     top: 0;
+    left: 50%;
     width: 100%;
-    background-color: rgb(31, 41, 55, 0.95);
+    transform: translateX(-50%);
+    border-radius: 0;
+    background-color: whitesmoke;
     z-index: 50;
+
+    transition: all 0.3s ease;
 }
 
 .nav-container {
     margin-left: auto;
     margin-right: auto;
     max-width: 1280px;
-    padding: 1rem;
+    padding: .75rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .nav-logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: rgb(59, 130, 246);
+    width: 200px;
 }
 
 .nav-desktop {
     display: none;
     gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .nav-bar.scrolled {
+        width: 90%;
+    }
+
+    .nav-container {
+        padding: .75rem 1.5rem;
+    }
 }
 
 @media (min-width: 768px) {
@@ -46,8 +73,16 @@ body {
 }
 
 .nav-link {
-    color: white;
+    color: black;
     cursor: pointer;
+}
+
+.nav-item {
+    color: black;
+}
+
+.dropdown-item {
+    color: black;
 }
 
 .nav-link:hover {
@@ -61,6 +96,7 @@ body {
 }
 
 .hamburger-btn {
+    color: black;
     display: flex;
     outline: none;
 }
@@ -184,7 +220,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to bottom, rgb(17, 24, 39), rgb(30, 58, 138));
+    background: linear-gradient(to bottom, rgb(20, 32, 60), rgb(33, 66, 156));
     position: relative;
 }
 

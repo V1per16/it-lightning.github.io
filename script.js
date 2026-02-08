@@ -63,6 +63,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // JavaScript (put in <script> tag or external file)
+    window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.nav-bar');
+    
+    // Change threshold as you like (e.g. 150, 300, window.innerHeight * 0.6, ...)
+    if (window.scrollY > 120) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+    });
+
     // Arrow down button
     const arrowDownBtn = document.getElementById('arrow-down-btn');
     if (arrowDownBtn) {
