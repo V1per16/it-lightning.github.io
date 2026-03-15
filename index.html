@@ -13,7 +13,6 @@
         <nav class="nav-bar">
             <div class="nav-container">
                 <div class="nav-logo"><a href="index.html"><img src="logo_large.png" alt="IT-Lightning"></a></div>
-                <!-- Desktop Navigation -->
                 <div class="nav-desktop">
                     <a href="index.html#home" class="nav-item">Home</a>
                     <div class="nav-item dropdown">
@@ -26,14 +25,12 @@
                     <a href="about.html" class="nav-item">Über mich</a>
                     <a href="kontakt.html" class="nav-item">Kontakt</a>
                 </div>
-                <!-- Hamburger Button -->
                 <button id="hamburger-btn" class="hamburger-btn">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
                 </button>
             </div>
-            <!-- Mobile Navigation Menu -->
             <div id="mobile-menu" class="mobile-menu hidden">
                 <a href="index.html#home" class="nav-item-mobile">Home</a>
                 <div class="nav-item-mobile dropdown">
@@ -44,7 +41,7 @@
                     </div>
                 </div>
                 <a href="about.html" class="nav-item-mobile">About</a>
-                <a href="kontakt.css" class="nav-item-mobile">Contact</a>
+                <a href="kontakt.html" class="nav-item-mobile">Kontakt</a>
             </div>
         </nav>
 
@@ -65,15 +62,15 @@
         <!-- Services Section -->
         <section id="services" class="services-section">
             <div class="services-container">
-                <h2 class="section-title">Unsere Dienstleistungen</h2>
+                <h2 class="section-title">Meine Dienstleistungen</h2>
                 <div class="services-grid">
                     <div class="service-card">
                         <div class="service-text">
                             <h3 class="service-title">IT-Support</h3>
-                            <p>IT-Support, Fehlerbehebungen, Software- und E-Mail-Einrichtung sowie Microsoft-Unterstützung für Privatkunden und Unternehmen.</p>
+                            <p>IT-Support, Fehlerbehebungen, Software- und E-Mail-Einrichtung sowie Microsoft-Unterstützung für Privatkunden.</p>
                         </div>
                         <div class="service-button-container">
-                            <a href="it-support.html" class="service-button">Zur Hilfe</a>
+                            <a href="it-support.html" class="service-button">Mehr Informationen</a>
                         </div>
                     </div>
 
@@ -90,21 +87,13 @@
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="about-section">
-            <div class="about-container">
-                <h2 class="section-title">Über IT-Lightning</h2>
-                <p class="about-text">IT-Lightning ist Ihr lokaler Partner für persönlichen IT-Support und moderne Webentwicklung lokal in Winterthur. Wir liefern Lösungen, die Privatkunden und KMU's im digitalen Zeitalter zum Erfolg verhelfen. Wir erfüllen Ihre technischen Anforderungen persönlich, günstig und unkompliziert.</p>
-            </div>
-        </section>
-
         <!-- Portfolio Section -->
         <section id="portfolio" class="portfolio-section">
             <div class="portfolio-container">
-                <h2 class="section-title">Unsere Projekte</h2>
+                <h2 class="section-title">Meine Projekte</h2>
                 <div class="portfolio-grid">
                     <div class="portfolio-item">
-                        <a href="wanderungenschweiz.ch">
+                        <a href="wanderungenschweiz.netlify.app">
                             <img src="wanderwebseiteimg.jpg" alt="wanderungenschweiz" class="portfolio-image">
                             <div class="portfolio-overlay">
                                 <p class="portfolio-text">wanderungenschweiz.ch</p>
@@ -120,12 +109,22 @@
                         </a>
                     </div>
                     <div class="portfolio-item">
-                        <img src="https://via.placeholder.com/400x300" alt="Project 3" class="portfolio-image">
-                        <div class="portfolio-overlay">
-                            <p class="portfolio-text">portfolio</p>
-                        </div>
+                        <a href="https://sim0n-portfolio.netlify.app">
+                            <img src="portfoliowebsite_img.png" alt="Mein Portfolio" class="portfolio-image">
+                            <div class="portfolio-overlay">
+                                <p class="portfolio-text">sim0n-portfolio</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="about-container">
+                <h2 class="section-title">Über IT-Lightning</h2>
+                <p class="about-text">IT-Lightning ist Ihr lokaler Partner für persönlichen IT-Support und moderne Webentwicklung lokal in Winterthur. Ich liefere Lösungen, die Privatkunden und KMU's im digitalen Zeitalter zum Erfolg verhelfen. Ich erfülle Ihre technischen Anforderungen persönlich, günstig und unkompliziert.</p>
             </div>
         </section>
 
@@ -145,6 +144,7 @@
         <!-- Footer -->
         <footer class="footer">
             <p>© 2026 IT-Lightning. All rights reserved.</p>
+            <a href="agb.html" id="agb-link">AGB</a>
         </footer>
 
         <script src="script.js"></script>

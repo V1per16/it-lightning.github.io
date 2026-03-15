@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IT-Lightning - AGB</title>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="agb.css">
+    </head>
+    <body class="site-body">
+        <!-- Navigation -->
+        <nav class="nav-bar">
+            <div class="nav-container">
+                <div class="nav-logo"><a href="index.html"><img src="logo_large.png" alt="IT-Lightning"></a></div>
+                <div class="nav-desktop">
+                    <a href="index.html#home" class="nav-item">Home</a>
+                    <div class="nav-item dropdown">
+                        <span class="nav-link">Dienstleistungen</span>
+                        <div class="dropdown-menu">
+                            <a href="it-support.html" class="dropdown-item">IT-Support</a>
+                            <a href="webdev.html" class="dropdown-item">Webseiten</a>
+                        </div>
+                    </div>
+                    <a href="about.html" class="nav-item">Über mich</a>
+                    <a href="kontakt.html" class="nav-item">Kontakt</a>
+                </div>
+                <button id="hamburger-btn" class="hamburger-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="mobile-menu hidden">
+                <a href="index.html#home" class="nav-item-mobile">Home</a>
+                <div class="nav-item-mobile dropdown">
+                    <span class="nav-link-mobile dropdown-toggle">Services</span>
+                    <div class="dropdown-menu hidden">
+                        <a href="it-support.html" class="dropdown-item">IT-Support</a>
+                        <a href="webdev.html" class="dropdown-item">Web</a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-item-mobile">About</a>
+                <a href="kontakt.html" class="nav-item-mobile">Kontakt</a>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <h1 class="hero-title">AGB</h1>
+                <p class="hero-text">Allgemeine Geschäftsbedingungen</p>
+                <button id="arrow-down-btn" class="arrow-down-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="arrow-down-icon">
+                        <path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- AGB Content -->
+        <section class="agb-section">
+            <div class="agb-container">
+
+                <!-- TOC -->
+                <nav class="agb-toc">
+                    <div class="agb-toc-title">Inhaltsverzeichnis</div>
+                    <ol class="agb-toc-list">
+                        <li><a href="#s1">Geltungsbereich</a></li>
+                        <li><a href="#s2">Leistungen</a></li>
+                        <li><a href="#s3">Preisgestaltung und Stundenbasis</a></li>
+                        <li><a href="#s4">Besprechungen und Kommunikation</a></li>
+                        <li><a href="#s5">Einsicht in den Projektfortschritt</a></li>
+                        <li><a href="#s6">Mitwirkungspflichten des Kunden</a></li>
+                        <li><a href="#s7">Änderungen und Zusatzleistungen</a></li>
+                        <li><a href="#s8">Zahlungsbedingungen</a></li>
+                        <li><a href="#s9">Zahlungsverzug</a></li>
+                        <li><a href="#s10">Bereitstellung der Leistungen</a></li>
+                        <li><a href="#s11">Projektabnahme</a></li>
+                        <li><a href="#s12">Wartung und Support</a></li>
+                        <li><a href="#s13">Hosting und Drittanbieter</a></li>
+                        <li><a href="#s14">Urheberrechte und Nutzungsrechte</a></li>
+                        <li><a href="#s15">Referenzrecht</a></li>
+                        <li><a href="#s16">Inhalte des Kunden</a></li>
+                        <li><a href="#s17">Haftung</a></li>
+                        <li><a href="#s18">Schlussbestimmungen</a></li>
+                    </ol>
+                </nav>
+
+                <!-- Sections -->
+                <div class="agb-body">
+
+                    <div class="agb-section-block" id="s1">
+                        <div class="agb-section-num">§ 1</div>
+                        <h2 class="agb-section-heading">Geltungsbereich</h2>
+                        <p>Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Dienstleistungen und Angebote von IT-Lightning (nachfolgend „Anbieter") gegenüber seinen Kunden.</p>
+                        <p>Mit der Beauftragung einer Leistung akzeptiert der Kunde diese AGB. Abweichende Bedingungen des Kunden gelten nur, wenn sie vom Anbieter ausdrücklich schriftlich bestätigt wurden.</p>
+                    </div>
+
+                    <div class="agb-section-block" id="s2">
+                        <div class="agb-section-num">§ 2</div>
+                        <h2 class="agb-section-heading">Leistungen</h2>
+                        <p>Der Anbieter erbringt insbesondere folgende Dienstleistungen:</p>
+                        <ul class="agb-list">
+                            <li>Erstellung und Entwicklung von Websites</li>
+                            <li>Webdesign und Benutzeroberflächen (UI/UX)</li>
+                            <li>Technische Beratung im Bereich Webentwicklung und IT</li>
+                            <li>Anpassung und Erweiterung bestehender Websites</li>
+                            <li>Wartung und Support (falls vereinbart)</li>
+                        </ul>
+                        <p>Der genaue Leistungsumfang ergibt sich aus der jeweiligen Offerte oder individuellen Vereinbarung mit dem Kunden.</p>
+                    </div>
+
+                    <div class="agb-section-block" id="s3">
+                        <div class="agb-section-num">§ 3</div>
+                        <h2 class="agb-section-heading">Preisgestaltung und Stundenbasis</h2>
+                        <p>Die Erstellung von Websites und digitalen Leistungen erfolgt grundsätzlich auf Stundenbasis.</p>
+                        <p>Der Gesamtpreis eines Projekts hängt unter anderem von folgenden Faktoren ab:</p>
+                        <ul class="agb-list">
+                            <li>Umfang des Projekts</li>
+                            <li>Gewünschte Funktionen</li>
+                            <li>Designanforderungen</li>
+                            <li>Integrationen oder externe Systeme</li>
+                            <li>Änderungswünsche während der Entwicklung</li>
+                        </ul>
+                        <p>Die Preise können daher je nach Projektgröße und individuellen Anforderungen des Kunden variieren. Der Anbieter kann vor Projektbeginn eine unverbindliche Aufwandsschätzung oder Offerte erstellen.</p>
+                    </div>
+
+                    <div class="agb-section-block" id="s4">
+                        <div class="agb-section-num">§ 4</div>
+                        <h2 class="agb-section-heading">Besprechungen und Kommunikation</h2>
+                        <p>Der Kunde kann während der Projektlaufzeit Besprechungen oder Abstimmungen mit dem Anbieter anfordern, um Fortschritte zu besprechen oder Fragen zum Projekt zu klären. Dazu zählen insbesondere:</p>
+                        <ul class="agb-list">
+                            <li>Online-Meetings</li>
+                            <li>Telefonate</li>
+                            <li>Längere Projektabstimmungen oder Beratungsgespräche</li>
+                        </ul>
+                        <p>Diese gelten als Arbeitszeit und können entsprechend des vereinbarten Stundensatzes verrechnet werden.</p>
+                    </div>
+
+                    <div class="agb-section-block" id="s5">
+                        <div class="agb-section-num">§ 5</div>
+                        <h2 class="agb-section-heading">Einsicht in den Projektfortschritt</h2>
+                        <p>Der Kunde hat das Recht, sich über den Fortschritt des Projekts zu informieren. Der Anbieter kann dem Kunden auf Anfrage das aktuelle Design, Funktionen der Website sowie den Entwicklungsstand demonstrieren.</p>
+                        <p>Diese Demonstration erfolgt ausschließlich zu Informationszwecken. Eine vollständige Freischaltung oder Übergabe der Website erfolgt erst nach vollständiger Zahlung gemäß diesen AGB.</p>
+                    </div>
+
+                    <div class="agb-section-block" id="s6">
+                        <div class="agb-section-num">§ 6</div>
+                        <h2 class="agb-section-heading">Mitwirkungspflichten des Kunden</h2>
+                        <p>Der Kunde verpflichtet sich, alle zur Projektdurchführung notwendigen Informationen rechtzeitig bereitzustellen, insbesondere:</p>
+                        <ul class="agb-list">
+                            <li>Texte</li>
+                            <li>Bilder und Medien</li>
+                            <li>Logos und Branding-Material</li>
+                            <li>Technische Informationen oder Zugangsdaten</li>
+                        </ul>
+                        <p>Verzögerungen durch fehlende Mitwirkung können zu Projektverzögerungen führen. Der Anbieter haftet nicht für Verzögerungen, die durch fehlende Mitwirkung des Kunden entstehen.</p>
+                    </div>
+
+                    <div class="agb-section-block" id="s7">
+                        <div class="agb-section-num">§ 7</div>
+                        <h2 class="agb-section-heading">Änderungen und Zusatzleistungen</h2>
+                        <p>Änderungen oder Erweiterungen eines Projekts, die über den ursprünglich vereinbarten Leistungsumfang hinausgehen, gelten als zusätzliche Leistungen. Diese werden entsprechend des tatsächlichen Arbeitsaufwands berechnet.</p>
+                    </div>
+
+                    <div class="agb-section-block" id="s8">
+                        <div class="agb-section-num">§ 8</div>
+                        <h2 class="agb-section-heading">Zahlungsbedingungen</h2>
+                        <p>Rechnungen sind innerhalb von 14 Tagen nach Rechnungsstellung ohne Abzug zahlbar, sofern nichts anderes vereinbart wurde.</p>
+                        <p>Bei größeren Projekten behält sich der Anbieter vor, eine Anzahlung, Teilzahlungen oder eine Vorauszahlung vor Beginn der Projektarbeit zu verlangen.</p>
+                    </div>
+
+                    <div class="agb-section-block" id="s9">
+                        <div class="agb-section-num">§ 9</div>
+                        <h2 class="agb-section-heading">Zahlungsverzug</h2>
+                        <p>Bei Zahlungsverzug ist der Anbieter berechtigt:</p>
+                        <ul class="agb-list">
+                            <li>Verzugszinsen gemäß schweizerischem Obligationenrecht zu berechnen</li>
+                            <li>Laufende Arbeiten auszusetzen</li>
+                            <li>Die Bereitstellung von Leistungen zu verweigern</li>
+                        </ul>
+                        <p>bis die offene Rechnung vollständig beglichen wurde.</p>
+                    </div>
+
+                    <div class="agb-section-block" id="s10">
+                        <div class="agb-section-num">§ 10</div>
+                        <h2 class="agb-section-heading">Bereitstellung der Leistungen</h2>
+                        <p>Alle vom Anbieter erstellten Leistungen, einschließlich Website-Dateien, Quellcode, Zugangsdaten sowie veröffentlichte oder installierte Websites, werden erst nach vollständigem Zahlungseingang beim Anbieter an den Kunden übergeben oder freigeschaltet.</p>
+                        <p>Der Anbieter ist berechtigt, die Freigabe der Leistungen bis zur vollständigen Bezahlung zurückzuhalten.</p>
+                    </div>
+
+                    <div class="agb-section-block" id="s11">
+                        <div class="agb-section-num">§ 11</div>
+                        <h2 class="agb-section-heading">Projektabnahme</h2>
+                        <p>Nach Fertigstellung eines Projekts erhält der Kunde die Möglichkeit, die Website oder Leistung zu prüfen. Beanstandungen müssen innerhalb von <strong>10 Tagen</strong> nach Präsentation oder Demonstration gemeldet werden.</p>
+                        <p>Erfolgt innerhalb dieser Frist keine Rückmeldung, gilt das Projekt als abgenommen. Nach der Abnahme gelten weitere Änderungen als separate Zusatzleistungen.</p>
+                    </div>
+
+                    <div class="agb-section-block" id="s12">
+                        <div class="agb-section-num">§ 12</div>
+                        <h2 class="agb-section-heading">Wartung und Support</h2>
+                        <p>Wartung, Updates oder Supportleistungen sind nur Bestandteil des Vertrags, wenn sie ausdrücklich vereinbart wurden. Ohne entsprechende Vereinbarung besteht keine Verpflichtung des Anbieters zu:</p>
+                        <ul class="agb-list">
+                            <li>Sicherheitsupdates</li>
+                            <li>Technischen Anpassungen</li>
+                            <li>Fehlerbehebungen nach Projektabschluss</li>
+                        </ul>
+                    </div>
+
+                    <div class="agb-section-block" id="s13">
+                        <div class="agb-section-num">§ 13</div>
+                        <h2 class="agb-section-heading">Hosting und Drittanbieter</h2>
+                        <p>Der Anbieter kann für die Umsetzung eines Projekts Dienste von Drittanbietern verwenden, z. B. Hostinganbieter, Domainanbieter sowie externe Software oder Plugins.</p>
+                        <p>Der Anbieter haftet nicht für Ausfälle dieser Dienste, Sicherheitsprobleme bei Drittsoftware oder Änderungen von Drittanbieter-Plattformen.</p>
+                    </div>
+
+                    <div class="agb-section-block" id="s14">
+                        <div class="agb-section-num">§ 14</div>
+                        <h2 class="agb-section-heading">Urheberrechte und Nutzungsrechte</h2>
+                        <p>Alle durch den Anbieter erstellten Designs, Codes und technischen Lösungen bleiben bis zur vollständigen Bezahlung Eigentum des Anbieters.</p>
+                        <p>Nach vollständiger Zahlung erhält der Kunde das Nutzungsrecht an der erstellten Website im vereinbarten Umfang.</p>
+                    </div>
+
+                    <div class="agb-section-block" id="s15">
+                        <div class="agb-section-num">§ 15</div>
+                        <h2 class="agb-section-heading">Referenzrecht</h2>
+                        <p>Der Anbieter ist berechtigt, abgeschlossene Projekte zu Referenzzwecken zu verwenden, insbesondere für Portfolio, Website des Anbieters sowie Präsentationen oder Eigenwerbung — sofern der Kunde dem nicht ausdrücklich widerspricht.</p>
+                    </div>
+
+                    <div class="agb-section-block" id="s16">
+                        <div class="agb-section-num">§ 16</div>
+                        <h2 class="agb-section-heading">Inhalte des Kunden</h2>
+                        <p>Der Kunde ist verantwortlich für sämtliche bereitgestellten Inhalte (Texte, Bilder, Videos usw.) und stellt sicher, dass diese keine Rechte Dritter verletzen.</p>
+                        <p>Der Anbieter übernimmt keine Haftung für rechtswidrige oder urheberrechtsverletzende Inhalte des Kunden.</p>
+                    </div>
+
+                    <div class="agb-section-block" id="s17">
+                        <div class="agb-section-num">§ 17</div>
+                        <h2 class="agb-section-heading">Haftung</h2>
+                        <p>Der Anbieter haftet nur für Schäden, die durch vorsätzliches oder grob fahrlässiges Verhalten verursacht wurden.</p>
+                        <p>Die Haftung für indirekte Schäden, entgangenen Gewinn oder Datenverlust wird im gesetzlich zulässigen Umfang ausgeschlossen.</p>
+                    </div>
+
+                    <div class="agb-section-block" id="s18">
+                        <div class="agb-section-num">§ 18</div>
+                        <h2 class="agb-section-heading">Schlussbestimmungen</h2>
+                        <p>Sollte eine Bestimmung dieser AGB unwirksam sein, bleibt die Gültigkeit der übrigen Bestimmungen unberührt.</p>
+                        <p>Es gilt Schweizer Recht. Gerichtsstand ist der Sitz des Anbieters.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2026 IT-Lightning. All rights reserved.</p>
+            <a href="agb.html" id="agb-link">AGB</a>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>

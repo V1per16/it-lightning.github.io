@@ -13,7 +13,6 @@
         <nav class="nav-bar">
             <div class="nav-container">
                 <div class="nav-logo"><a href="index.html"><img src="logo_large.png" alt="IT-Lightning"></a></div>
-                <!-- Desktop Navigation -->
                 <div class="nav-desktop">
                     <a href="index.html#home" class="nav-item">Home</a>
                     <div class="nav-item dropdown">
@@ -26,14 +25,12 @@
                     <a href="about.html" class="nav-item">Über mich</a>
                     <a href="kontakt.html" class="nav-item">Kontakt</a>
                 </div>
-                <!-- Hamburger Button -->
                 <button id="hamburger-btn" class="hamburger-btn">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
                 </button>
             </div>
-            <!-- Mobile Navigation Menu -->
             <div id="mobile-menu" class="mobile-menu hidden">
                 <a href="index.html#home" class="nav-item-mobile">Home</a>
                 <div class="nav-item-mobile dropdown">
@@ -44,7 +41,7 @@
                     </div>
                 </div>
                 <a href="about.html" class="nav-item-mobile">About</a>
-                <a href="kontakt.css" class="nav-item-mobile">Contact</a>
+                <a href="kontakt.html" class="nav-item-mobile">Kontakt</a>
             </div>
         </nav>
 
@@ -53,7 +50,6 @@
             <div class="hero-container">
                 <h1 class="hero-title">Webentwicklung</h1>
                 <p class="hero-text">Vergleiche unsere erstklassigen Angebote für moderne und massgeschneiderte Webseiten.</p>
-
                 <button id="arrow-down-btn" class="arrow-down-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="arrow-down-icon">
                         <path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/>
@@ -62,442 +58,239 @@
             </div>
         </section>
 
-        <!-- Angebote Section -->
-        <section id="angebote" class="angebote-section">
-            <div class="angebote-container">
-                <h2 class="section-title">Service-Paket Übersicht</h2>
-                <div class="buttons-top">
-                    <a href="rechner.html" class="package-button">Preis Rechner</a>
-                    <a href="" class="package-button">Kontaktiere uns</a>
-                </div>
-                <div class="comparison-table-container">
-                    <div class="comparison-table-mobile">
-                        <div class="package-card">
-                            <h3 class="package-title">Lite</h3>
-                            <div class="feature-item">
-                                <span class="feature-name">Maximale Seitenanzahl</span>
-                                <span class="feature-value">3 Seiten</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">Bilder/Fotos</span>
-                                <span class="feature-value">Bis zu 4 Bilder</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">SEO-Optimierung</span>
-                                <span class="feature-value">Grundlegend</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">Beratung</span>
-                                <span class="feature-value">2 Stunde</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">Mobile Ansicht</span>
-                                <span class="feature-value check-mark">✔</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">Formulare</span>
-                                <span class="feature-value cross-mark">✘</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">Blog</span>
-                                <span class="feature-value cross-mark">✘</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">Newsletter</span>
-                                <span class="feature-value cross-mark">✘</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">Cookie/Datenschutzseite</span>
-                                <span class="feature-value cross-mark">✘</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">Kunden-/Mitgliederbereich</span>
-                                <span class="feature-value cross-mark">✘</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">Abonnementsystem</span>
-                                <span class="feature-value cross-mark">✘</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">Zahlungsmethoden-Integration</span>
-                                <span class="feature-value cross-mark">✘</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">E-Commerce</span>
-                                <span class="feature-value cross-mark">✘</span>
-                            </div>
-                        </div>
-                        <div class="package-card">
-                            <h3 class="package-title">Basic</h3>
-                            <div class="feature-item">
-                                <span class="feature-name">Maximale Seitenanzahl</span>
-                                <span class="feature-value">5 Seiten</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">Bilder/Fotos</span>
-                                <span class="feature-value">Bis zu 8 Bilder</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">SEO-Optimierung</span>
-                                <span class="feature-value">Fortgeschritten</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">Beratung</span>
-                                <span class="feature-value">3 Stunden</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">Mobile Ansicht</span>
-                                <span class="feature-value check-mark">✔</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">Formulare</span>
-                                <span class="feature-value check-mark">✔</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">Blog</span>
-                                <span class="feature-value check-mark">✔</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">Newsletter</span>
-                                <span class="feature-value check-mark">✔</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">Cookie/Datenschutzseite</span>
-                                <span class="feature-value check-mark">✔</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">Kunden-/Mitgliederbereich</span>
-                                <span class="feature-value cross-mark">✘</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">Abonnementsystem</span>
-                                <span class="feature-value cross-mark">✘</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">Zahlungsmethoden-Integration</span>
-                                <span class="feature-value cross-mark">✘</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">E-Commerce</span>
-                                <span class="feature-value cross-mark">✘</span>
-                            </div>
-                        </div>
-                        <div class="package-card">
-                            <h3 class="package-title">Premium</h3>
-                            <div class="feature-item">
-                                <span class="feature-name">Maximale Seitenanzahl</span>
-                                <span class="feature-value">10 Seiten</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">Bilder/Fotos</span>
-                                <span class="feature-value">Bis zu 10 Bilder/Videos</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">SEO-Optimierung</span>
-                                <span class="feature-value">Professionell</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">Beratung</span>
-                                <span class="feature-value">4 Stunden</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">Mobile Ansicht</span>
-                                <span class="feature-value check-mark">✔</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">Formulare</span>
-                                <span class="feature-value check-mark">✔</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">Blog</span>
-                                <span class="feature-value check-mark">✔</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">Newsletter</span>
-                                <span class="feature-value check-mark">✔</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">Cookie/Datenschutzseite</span>
-                                <span class="feature-value check-mark">✔</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">Kunden-/Mitgliederbereich</span>
-                                <span class="feature-value check-mark">✔</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">Abonnementsystem</span>
-                                <span class="feature-value check-mark">✔</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">Zahlungsmethoden-Integration</span>
-                                <span class="feature-value check-mark">✔</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-name">E-Commerce</span>
-                                <span class="feature-value check-mark">✔</span>
-                            </div>
-                        </div>
-                    </div>
-                    <table class="comparison-table desktop-only">
-                        <thead>
-                            <tr>
-                                <th class="table-header">Features</th>
-                                <th class="table-header">Lite</th>
-                                <th class="table-header">Basic</th>
-                                <th class="table-header">Premium</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="table-row">
-                                <td class="table-cell">Maximale Seitenanzahl</td>
-                                <td class="table-cell">3 Seiten</td>
-                                <td class="table-cell">5 Seiten</td>
-                                <td class="table-cell">10 Seiten</td>
-                            </tr>
-                            <tr class="table-row">
-                                <td class="table-cell">Bilder/Fotos</td>
-                                <td class="table-cell">Bis zu 4 Bilder</td>
-                                <td class="table-cell">Bis zu 8 Bilder</td>
-                                <td class="table-cell">Bis zu 10 Bilder/Videos</td>
-                            </tr>
-                            <tr class="table-row">
-                                <td class="table-cell">SEO-Optimierung</td>
-                                <td class="table-cell">Grundlegend</td>
-                                <td class="table-cell">Fortgeschritten</td>
-                                <td class="table-cell">Professionell</td>
-                            </tr>
-                            <tr class="table-row">
-                                <td class="table-cell">Beratung</td>
-                                <td class="table-cell">2 Stunde</td>
-                                <td class="table-cell">3 Stunden</td>
-                                <td class="table-cell">4 Stunden</td>
-                            </tr>
-                            <tr class="table-row">
-                                <td class="table-cell">Mobile Ansicht</td>
-                                <td class="table-cell check-mark">✔</td>
-                                <td class="table-cell check-mark">✔</td>
-                                <td class="table-cell check-mark">✔</td>
-                            </tr>
-                            <tr class="table-row">
-                                <td class="table-cell">Formulare</td>
-                                <td class="table-cell cross-mark">✘</td>
-                                <td class="table-cell check-mark">✔</td>
-                                <td class="table-cell check-mark">✔</td>
-                            </tr>
-                            <tr class="table-row">
-                                <td class="table-cell">Blog</td>
-                                <td class="table-cell cross-mark">✘</td>
-                                <td class="table-cell check-mark">✔</td>
-                                <td class="table-cell check-mark">✔</td>
-                            </tr>
-                            <tr class="table-row">
-                                <td class="table-cell">Newsletter</td>
-                                <td class="table-cell cross-mark">✘</td>
-                                <td class="table-cell check-mark">✔</td>
-                                <td class="table-cell check-mark">✔</td>
-                            </tr>
-                            <tr class="table-row">
-                                <td class="table-cell">Cookie/Datenschutzseite</td>
-                                <td class="table-cell cross-mark">✘</td>
-                                <td class="table-cell check-mark">✔</td>
-                                <td class="table-cell check-mark">✔</td>
-                            </tr>
-                            <tr class="table-row">
-                                <td class="table-cell">Kunden-/Mitgliederbereich</td>
-                                <td class="table-cell cross-mark">✘</td>
-                                <td class="table-cell cross-mark">✘</td>
-                                <td class="table-cell check-mark">✔</td>
-                            </tr>
-                            <tr class="table-row">
-                                <td class="table-cell">Abonnementsystem</td>
-                                <td class="table-cell cross-mark">✘</td>
-                                <td class="table-cell cross-mark">✘</td>
-                                <td class="table-cell check-mark">✔</td>
-                            </tr>
-                            <tr class="table-row">
-                                <td class="table-cell">Zahlungsmethoden-Integration</td>
-                                <td class="table-cell cross-mark">✘</td>
-                                <td class="table-cell cross-mark">✘</td>
-                                <td class="table-cell check-mark">✔</td>
-                            </tr>
-                            <tr class="table-row">
-                                <td class="table-cell">E-Commerce</td>
-                                <td class="table-cell cross-mark">✘</td>
-                                <td class="table-cell cross-mark">✘</td>
-                                <td class="table-cell check-mark">✔</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <h2 class="section-title">Optionale Add-ons</h2>
-                <div class="addon-table-container">
-                    <div class="addon-table-mobile">
-                        <div class="addon-card">
-                            <span class="addon-name">Domain-Einrichtung</span>
-                            <span class="addon-description">Registrierung und Einrichtung einer individuellen Domain (z. B. www.deinunternehmen.com).</span>
-                        </div>
-                        <div class="addon-card">
-                            <span class="addon-name">Hosting</span>
-                            <span class="addon-description">Bereitstellung von Speicherplatz und Server für deine Website.</span>
-                        </div>
-                        <div class="addon-card">
-                            <span class="addon-name">E-Mail-Einrichtung</span>
-                            <span class="addon-description">Einrichten professioneller E-Mail-Adressen (z. B. info@deinunternehmen.com).</span>
-                        </div>
-                        <div class="addon-card">
-                            <span class="addon-name">Zusätzliche Seiten</span>
-                            <span class="addon-description">Mehr Seiten für die Website über das Limit des Plans hinaus.</span>
-                        </div>
-                        <div class="addon-card">
-                            <span class="addon-name">Weitere Fotos</span>
-                            <span class="addon-description">Individuell gestaltete und für die Website angepasste Fotos.</span>
-                        </div>
-                        <div class="addon-card">
-                            <span class="addon-name">Erweiterte SEO-Optimierung</span>
-                            <span class="addon-description">Optimierung von Bildern, Inhalten, Ladezeiten, Meta-Tags und Keywords.</span>
-                        </div>
-                    </div>
-                    <table class="addon-table desktop-only">
-                        <thead>
-                            <tr>
-                                <th class="table-header">Feature</th>
-                                <th class="table-header">Beschreibung</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="table-row">
-                                <td class="table-cell">Domain-Einrichtung</td>
-                                <td class="table-cell">Registrierung und Einrichtung einer individuellen Domain (z. B. www.deinunternehmen.com).</td>
-                            </tr>
-                            <tr class="table-row">
-                                <td class="table-cell">Hosting</td>
-                                <td class="table-cell">Bereitstellung von Speicherplatz und Server für deine Website.</td>
-                            </tr>
-                            <tr class="table-row">
-                                <td class="table-cell">E-Mail-Einrichtung</td>
-                                <td class="table-cell">Einrichten professioneller E-Mail-Adressen (z. B. info@deinunternehmen.com).</td>
-                            </tr>
-                            <tr class="table-row">
-                                <td class="table-cell">Zusätzliche Seiten</td>
-                                <td class="table-cell">Mehr Seiten für die Website über das Limit des Plans hinaus.</td>
-                            </tr>
-                            <tr class="table-row">
-                                <td class="table-cell">Weitere Fotos</td>
-                                <td class="table-cell">Individuell gestaltete und für die Website angepasste Fotos.</td>
-                            </tr>
-                            <tr class="table-row">
-                                <td class="table-cell">Erweiterte SEO-Optimierung</td>
-                                <td class="table-cell">Optimierung von Bildern, Inhalten, Ladezeiten, Meta-Tags und Keywords.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <h2 class="section-title">Alternative: Webseite von Grund auf selbst programmiert</h2>
-                <div class="custom-code-table-container">
-                    <div class="custom-code-table-mobile">
-                        <div class="custom-code-card">
-                            <span class="custom-code-name">Kontrolle</span>
-                            <span class="custom-code-pro">Vollständige Kontrolle über Code, Design und Funktionalität.</span>
-                            <span class="custom-code-con">Komplex und erfordert umfassendes technisches Wissen.</span>
-                        </div>
-                        <div class="custom-code-card">
-                            <span class="custom-code-name">Zeit</span>
-                            <span class="custom-code-pro">Kein Warten auf Tools oder Updates.</span>
-                            <span class="custom-code-con">Extrem zeitaufwändig, besonders bei größeren Projekten.</span>
-                        </div>
-                        <div class="custom-code-card">
-                            <span class="custom-code-name">Flexibilität</span>
-                            <span class="custom-code-pro">Anpassungen und Erweiterungen jederzeit möglich.</span>
-                            <span class="custom-code-con">Langfristige Skalierbarkeit kann schwierig sein, wenn der Code nicht optimal ist.</span>
-                        </div>
-                        <div class="custom-code-card">
-                            <span class="custom-code-name">Kosten</span>
-                            <span class="custom-code-pro">Keine Lizenz- oder Abonnementgebühren für CMS-Systeme.</span>
-                            <span class="custom-code-con">Höhere indirekte Kosten durch den Zeitaufwand.</span>
-                        </div>
-                        <div class="custom-code-card">
-                            <span class="custom-code-name">Fehleranfälligkeit</span>
-                            <span class="custom-code-pro">Kein unnötiger Ballast durch externe Tools.</span>
-                            <span class="custom-code-con">Höhere Wahrscheinlichkeit für Bugs und Sicherheitslücken.</span>
-                        </div>
-                        <div class="custom-code-card">
-                            <span class="custom-code-name">Einzigartigkeit</span>
-                            <span class="custom-code-pro">Komplett individuelle und einzigartige Websites möglich.</span>
-                            <span class="custom-code-con">Ohne Frameworks fehlt der Zugang zu vorgefertigten Designs und Funktionen.</span>
-                        </div>
-                        <div class="custom-code-card">
-                            <span class="custom-code-name">Responsivität</span>
-                            <span class="custom-code-pro">Volle Kontrolle über mobile Optimierung und Ladezeiten.</span>
-                            <span class="custom-code-con">Manuelles Implementieren von responsivem Design ist aufwändig.</span>
-                        </div>
-                        <div class="custom-code-card">
-                            <span class="custom-code-name">Wartung</span>
-                            <span class="custom-code-pro">Unabhängigkeit von Drittanbietern und deren Updates.</span>
-                            <span class="custom-code-con">Alle Updates und Sicherheitsmaßnahmen müssen selbst durchgeführt werden.</span>
-                        </div>
-                    </div>
-                    <table class="custom-code-table desktop-only">
-                        <thead>
-                            <tr>
-                                <th class="table-header">Feature</th>
-                                <th class="table-header">Pros (Vorteile)</th>
-                                <th class="table-header">Cons (Nachteile)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="table-row">
-                                <td class="table-cell">Kontrolle</td>
-                                <td class="table-cell">Vollständige Kontrolle über Code, Design und Funktionalität.</td>
-                                <td class="table-cell">Komplex und erfordert umfassendes technisches Wissen.</td>
-                            </tr>
-                            <tr class="table-row">
-                                <td class="table-cell">Zeit</td>
-                                <td class="table-cell">Kein Warten auf Tools oder Updates.</td>
-                                <td class="table-cell">Extrem zeitaufwändig, besonders bei größeren Projekten.</td>
-                            </tr>
-                            <tr class="table-row">
-                                <td class="table-cell">Flexibilität</td>
-                                <td class="table-cell">Anpassungen und Erweiterungen jederzeit möglich.</td>
-                                <td class="table-cell">Langfristige Skalierbarkeit kann schwierig sein, wenn der Code nicht optimal ist.</td>
-                            </tr>
-                            <tr class="table-row">
-                                <td class="table-cell">Kosten</td>
-                                <td class="table-cell">Keine Lizenz- oder Abonnementgebühren für CMS-Systeme.</td>
-                                <td class="table-cell">Höhere indirekte Kosten durch den Zeitaufwand.</td>
-                            </tr>
-                            <tr class="table-row">
-                                <td class="table-cell">Fehleranfälligkeit</td>
-                                <td class="table-cell">Kein unnötiger Ballast durch externe Tools.</td>
-                                <td class="table-cell">Höhere Wahrscheinlichkeit für Bugs und Sicherheitslücken.</td>
-                            </tr>
-                            <tr class="table-row">
-                                <td class="table-cell">Einzigartigkeit</td>
-                                <td class="table-cell">Komplett individuelle und einzigartige Websites möglich.</td>
-                                <td class="table-cell">Ohne Frameworks fehlt der Zugang zu vorgefertigten Designs und Funktionen.</td>
-                            </tr>
-                            <tr class="table-row">
-                                <td class="table-cell">Responsivität</td>
-                                <td class="table-cell">Volle Kontrolle über mobile Optimierung und Ladezeiten.</td>
-                                <td class="table-cell">Manuelles Implementieren von responsivem Design ist aufwändig.</td>
-                            </tr>
-                            <tr class="table-row">
-                                <td class="table-cell">Wartung</td>
-                                <td class="table-cell">Unabhängigkeit von Drittanbietern und deren Updates.</td>
-                                <td class="table-cell">Alle Updates und Sicherheitsmaßnahmen müssen selbst durchgeführt werden.</td>
-                            </tr>
-                        </tbody>
-                    </table>
+        <!-- PLAN CARDS -->
+        <div class="wd-section" style="padding-top:1rem;">
+            <div class="wd-heading">
+                <h2>Service-Paket Übersicht</h2>
+                <p>Wähle das Paket, das zu deinem Projekt passt.</p>
+                <div class="wd-btn-group">
+                    <a href="rechner.html" class="wd-btn">Preis Rechner</a>
+                    <a href="kontakt.html" class="wd-btn wd-btn-ghost">Kontaktiere uns</a>
                 </div>
             </div>
-        </section>
+            <div class="plans-grid">
+
+                <!-- LITE -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <div class="plan-name">Lite</div>
+                        <div class="plan-desc">Einfache Präsenz & Visitenkarte</div>
+                    </div>
+                    <div class="plan-features">
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label"><strong>3 Seiten</strong> inklusive</div></div>
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label"><strong>Bis zu 4 Bilder</strong></div></div>
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label"><strong>Grundlegendes SEO</strong></div></div>
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label"><strong>2h Beratung</strong></div></div>
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label">Mobile-optimiert</div></div>
+                        <div class="plan-feature-row"><div class="feat-icon no">✕</div><div class="feat-label dimmed">Formulare</div></div>
+                        <div class="plan-feature-row"><div class="feat-icon no">✕</div><div class="feat-label dimmed">Blog & Newsletter</div></div>
+                        <div class="plan-feature-row"><div class="feat-icon no">✕</div><div class="feat-label dimmed">E-Commerce</div></div>
+                    </div>
+                    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+                        <span class="accordion-label">Alle Details anzeigen</span>
+                        <svg class="accordion-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="accordion-panel">
+                        <div class="accordion-inner">
+                            <div class="accordion-section-title">Seiten & Medien</div>
+                            <div class="accordion-row"><span>Maximale Seitenanzahl</span><span class="acc-val">3 Seiten</span></div>
+                            <div class="accordion-row"><span>Bilder / Fotos</span><span class="acc-val">Bis zu 4</span></div>
+                            <div class="accordion-row"><span>Videos</span><span class="acc-val cross-mark">✘</span></div>
+                            <div class="accordion-section-title">SEO & Beratung</div>
+                            <div class="accordion-row"><span>SEO-Optimierung</span><span class="acc-val">Grundlegend</span></div>
+                            <div class="accordion-row"><span>Beratungsstunden</span><span class="acc-val">2 Stunden</span></div>
+                            <div class="accordion-section-title">Funktionen</div>
+                            <div class="accordion-row"><span>Mobile Ansicht</span><span class="acc-val check-mark">✔</span></div>
+                            <div class="accordion-row"><span>Formulare</span><span class="acc-val cross-mark">✘</span></div>
+                            <div class="accordion-row"><span>Blog</span><span class="acc-val cross-mark">✘</span></div>
+                            <div class="accordion-row"><span>Newsletter</span><span class="acc-val cross-mark">✘</span></div>
+                            <div class="accordion-row"><span>Cookie / Datenschutzseite</span><span class="acc-val cross-mark">✘</span></div>
+                            <div class="accordion-row"><span>Kunden- / Mitgliederbereich</span><span class="acc-val cross-mark">✘</span></div>
+                            <div class="accordion-row"><span>Abonnementsystem</span><span class="acc-val cross-mark">✘</span></div>
+                            <div class="accordion-row"><span>Zahlungsmethoden-Integration</span><span class="acc-val cross-mark">✘</span></div>
+                            <div class="accordion-row"><span>E-Commerce</span><span class="acc-val cross-mark">✘</span></div>
+                        </div>
+                    </div>
+                    <div class="plan-cta"><a href="kontakt.html" class="plan-btn plan-btn-outline">Anfragen</a></div>
+                </div>
+
+                <!-- BASIC -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <div class="plan-name">Basic</div>
+                        <div class="plan-desc">Perfekt für kleine Unternehmen</div>
+                    </div>
+                    <div class="plan-features">
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label"><strong>5 Seiten</strong> inklusive</div></div>
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label"><strong>Bis zu 8 Bilder</strong></div></div>
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label"><strong>Fortgeschrittenes SEO</strong></div></div>
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label"><strong>3h Beratung</strong></div></div>
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label">Mobile-optimiert</div></div>
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label">Formulare</div></div>
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label">Blog, Newsletter, Datenschutz</div></div>
+                        <div class="plan-feature-row"><div class="feat-icon no">✕</div><div class="feat-label dimmed">E-Commerce</div></div>
+                    </div>
+                    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+                        <span class="accordion-label">Alle Details anzeigen</span>
+                        <svg class="accordion-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="accordion-panel">
+                        <div class="accordion-inner">
+                            <div class="accordion-section-title">Seiten & Medien</div>
+                            <div class="accordion-row"><span>Maximale Seitenanzahl</span><span class="acc-val">5 Seiten</span></div>
+                            <div class="accordion-row"><span>Bilder / Fotos</span><span class="acc-val">Bis zu 8</span></div>
+                            <div class="accordion-row"><span>Videos</span><span class="acc-val cross-mark">✘</span></div>
+                            <div class="accordion-section-title">SEO & Beratung</div>
+                            <div class="accordion-row"><span>SEO-Optimierung</span><span class="acc-val">Fortgeschritten</span></div>
+                            <div class="accordion-row"><span>Beratungsstunden</span><span class="acc-val">3 Stunden</span></div>
+                            <div class="accordion-section-title">Funktionen</div>
+                            <div class="accordion-row"><span>Mobile Ansicht</span><span class="acc-val check-mark">✔</span></div>
+                            <div class="accordion-row"><span>Formulare</span><span class="acc-val check-mark">✔</span></div>
+                            <div class="accordion-row"><span>Blog</span><span class="acc-val check-mark">✔</span></div>
+                            <div class="accordion-row"><span>Newsletter</span><span class="acc-val check-mark">✔</span></div>
+                            <div class="accordion-row"><span>Cookie / Datenschutzseite</span><span class="acc-val check-mark">✔</span></div>
+                            <div class="accordion-row"><span>Kunden- / Mitgliederbereich</span><span class="acc-val cross-mark">✘</span></div>
+                            <div class="accordion-row"><span>Abonnementsystem</span><span class="acc-val cross-mark">✘</span></div>
+                            <div class="accordion-row"><span>Zahlungsmethoden-Integration</span><span class="acc-val cross-mark">✘</span></div>
+                            <div class="accordion-row"><span>E-Commerce</span><span class="acc-val cross-mark">✘</span></div>
+                        </div>
+                    </div>
+                    <div class="plan-cta"><a href="kontakt.html" class="plan-btn plan-btn-outline">Anfragen</a></div>
+                </div>
+
+                <!-- PREMIUM -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <div class="plan-name">Premium</div>
+                        <div class="plan-desc">Für Online-Shops & grosse Projekte</div>
+                    </div>
+                    <div class="plan-features">
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label"><strong>10 Seiten</strong> inklusive</div></div>
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label"><strong>Bis zu 10 Bilder / Videos</strong></div></div>
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label"><strong>Professionelles SEO</strong></div></div>
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label"><strong>4h Beratung</strong></div></div>
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label">Mobile-optimiert</div></div>
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label">Formulare, Blog, Newsletter</div></div>
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label">Kunden- & Mitgliederbereich</div></div>
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label">E-Commerce & Zahlungen</div></div>
+                    </div>
+                    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+                        <span class="accordion-label">Alle Details anzeigen</span>
+                        <svg class="accordion-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="accordion-panel">
+                        <div class="accordion-inner">
+                            <div class="accordion-section-title">Seiten & Medien</div>
+                            <div class="accordion-row"><span>Maximale Seitenanzahl</span><span class="acc-val">10 Seiten</span></div>
+                            <div class="accordion-row"><span>Bilder / Fotos</span><span class="acc-val">Bis zu 10</span></div>
+                            <div class="accordion-row"><span>Videos</span><span class="acc-val check-mark">✔</span></div>
+                            <div class="accordion-section-title">SEO & Beratung</div>
+                            <div class="accordion-row"><span>SEO-Optimierung</span><span class="acc-val">Professionell</span></div>
+                            <div class="accordion-row"><span>Beratungsstunden</span><span class="acc-val">4 Stunden</span></div>
+                            <div class="accordion-section-title">Funktionen</div>
+                            <div class="accordion-row"><span>Mobile Ansicht</span><span class="acc-val check-mark">✔</span></div>
+                            <div class="accordion-row"><span>Formulare</span><span class="acc-val check-mark">✔</span></div>
+                            <div class="accordion-row"><span>Blog</span><span class="acc-val check-mark">✔</span></div>
+                            <div class="accordion-row"><span>Newsletter</span><span class="acc-val check-mark">✔</span></div>
+                            <div class="accordion-row"><span>Cookie / Datenschutzseite</span><span class="acc-val check-mark">✔</span></div>
+                            <div class="accordion-row"><span>Kunden- / Mitgliederbereich</span><span class="acc-val check-mark">✔</span></div>
+                            <div class="accordion-row"><span>Abonnementsystem</span><span class="acc-val check-mark">✔</span></div>
+                            <div class="accordion-row"><span>Zahlungsmethoden-Integration</span><span class="acc-val check-mark">✔</span></div>
+                            <div class="accordion-row"><span>E-Commerce</span><span class="acc-val check-mark">✔</span></div>
+                        </div>
+                    </div>
+                    <div class="plan-cta"><a href="kontakt.html" class="plan-btn plan-btn-outline">Anfragen</a></div>
+                </div>
+
+            </div>
+        </div>
+
+        <hr class="wd-divider">
+
+        <!-- ADD-ONS -->
+        <div class="wd-section">
+            <div class="wd-heading">
+                <h2>Optionale Add-ons</h2>
+                <p>Erweitere dein Paket mit diesen Zusatzleistungen.</p>
+            </div>
+            <div class="addons-grid">
+                <div class="addon-card-new">
+                    <div class="addon-title-new">Domain-Einrichtung</div>
+                    <div class="addon-text-new">Registrierung und Einrichtung einer individuellen Domain (z. B. www.deinunternehmen.com).</div>
+                </div>
+                <div class="addon-card-new">
+                    <div class="addon-title-new">Hosting</div>
+                    <div class="addon-text-new">Bereitstellung von Speicherplatz und Server für deine Website.</div>
+                </div>
+                <div class="addon-card-new">
+                    <div class="addon-title-new">E-Mail-Einrichtung</div>
+                    <div class="addon-text-new">Einrichten professioneller E-Mail-Adressen (z. B. info@deinunternehmen.com).</div>
+                </div>
+                <div class="addon-card-new">
+                    <div class="addon-title-new">Zusätzliche Seiten</div>
+                    <div class="addon-text-new">Mehr Seiten für die Website über das Limit des Plans hinaus.</div>
+                </div>
+                <div class="addon-card-new">
+                    <div class="addon-title-new">Weitere Fotos</div>
+                    <div class="addon-text-new">Individuell gestaltete und für die Website angepasste Fotos.</div>
+                </div>
+                <div class="addon-card-new">
+                    <div class="addon-title-new">Erweiterte SEO-Optimierung</div>
+                    <div class="addon-text-new">Optimierung von Bildern, Inhalten, Ladezeiten, Meta-Tags und Keywords.</div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="wd-divider">
+
+        <!-- PROS / CONS -->
+        <div class="wd-section">
+            <div class="wd-heading">
+                <h2>Alternative: Webseite von Grund auf selbst programmiert</h2>
+                <p>Pros und Cons einer vollständig selbst codierten Website.</p>
+            </div>
+            <div class="pros-cons-grid">
+                <div class="pc-col pros">
+                    <div class="pc-title">Vorteile</div>
+                    <div class="pc-item"><span class="marker">+</span>Vollständige Kontrolle über Code, Design und Funktionalität.</div>
+                    <div class="pc-item"><span class="marker">+</span>Kein Warten auf Tools oder Updates von Drittanbietern.</div>
+                    <div class="pc-item"><span class="marker">+</span>Anpassungen und Erweiterungen jederzeit möglich.</div>
+                    <div class="pc-item"><span class="marker">+</span>Keine Lizenz- oder Abonnementgebühren für CMS-Systeme.</div>
+                    <div class="pc-item"><span class="marker">+</span>Kein unnötiger Ballast durch externe Tools.</div>
+                    <div class="pc-item"><span class="marker">+</span>Komplett individuelle und einzigartige Websites möglich.</div>
+                    <div class="pc-item"><span class="marker">+</span>Volle Kontrolle über mobile Optimierung und Ladezeiten.</div>
+                    <div class="pc-item"><span class="marker">+</span>Unabhängigkeit von Drittanbietern und deren Updates.</div>
+                </div>
+                <div class="pc-col cons">
+                    <div class="pc-title">Nachteile</div>
+                    <div class="pc-item"><span class="marker">−</span>Komplex und erfordert umfassendes technisches Wissen.</div>
+                    <div class="pc-item"><span class="marker">−</span>Extrem zeitaufwändig, besonders bei grösseren Projekten.</div>
+                    <div class="pc-item"><span class="marker">−</span>Langfristige Skalierbarkeit schwierig bei suboptimalem Code.</div>
+                    <div class="pc-item"><span class="marker">−</span>Höhere indirekte Kosten durch den Zeitaufwand.</div>
+                    <div class="pc-item"><span class="marker">−</span>Höhere Wahrscheinlichkeit für Bugs und Sicherheitslücken.</div>
+                    <div class="pc-item"><span class="marker">−</span>Ohne Frameworks fehlt Zugang zu vorgefertigten Funktionen.</div>
+                    <div class="pc-item"><span class="marker">−</span>Manuelles Implementieren von responsivem Design ist aufwändig.</div>
+                    <div class="pc-item"><span class="marker">−</span>Alle Updates und Sicherheitsmassnahmen selbst durchführen.</div>
+                </div>
+            </div>
+        </div>
 
         <!-- Footer -->
         <footer class="footer">
             <p>© 2026 IT-Lightning. All rights reserved.</p>
+            <a href="agb.html" id="agb-link">AGB</a>
         </footer>
 
         <script src="script.js"></script>
+        <script>
+            function toggleAccordion(btn) {
+                const panel = btn.nextElementSibling;
+                const label = btn.querySelector('.accordion-label');
+                const isOpen = btn.classList.contains('open');
+                btn.classList.toggle('open', !isOpen);
+                label.textContent = isOpen ? 'Alle Details anzeigen' : 'Details ausblenden';
+                panel.style.maxHeight = isOpen ? '0' : panel.scrollHeight + 'px';
+            }
+        </script>
     </body>
 </html>

@@ -1,274 +1,462 @@
-.angebote-section {
-    padding: 2rem 0;
-    background-color: rgb(31, 41, 55);
+/* ── CSS VARIABLES ── */
+:root {
+    --bg-page:      rgb(31, 41, 55);
+    --bg-card:      rgb(42, 49, 61);
+    --bg-card-alt:  rgb(55, 65, 81);
+    --blue:         rgb(36, 99, 201);
+    --blue-bright:  rgb(62, 132, 246);
+    --blue-hover:   rgb(48, 109, 208);
+    --text-primary: rgb(209, 213, 219);
+    --text-muted:   rgb(167, 172, 183);
+    --border:       rgba(255, 255, 255, 0.1);
+    --green:        rgb(52, 178, 51);
+    --red:          rgb(207, 16, 32);
+    --radius:       1rem;
 }
 
-.angebote-container {
-    margin-left: auto;
-    margin-right: auto;
+body, .site-body {
+    background: var(--bg-page);
+}
+
+/* ── SECTION WRAPPER ── */
+.wd-section {
     max-width: 1280px;
-    padding: 0.5rem;
+    margin: 0 auto;
+    padding: 2rem 1.25rem;
 }
 
-.section-title {
-    color: white;
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    margin-top: 1rem;
+/* ── SECTION HEADING ── */
+.wd-heading {
     text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
 }
 
-.buttons-top {
+.wd-heading h2 {
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.wd-heading p {
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+/* ── BUTTONS ── */
+.wd-btn-group {
     display: flex;
+    gap: 0.75rem;
     justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
     flex-wrap: wrap;
 }
 
-.package-button {
-    display: inline-block;
-    background-color: rgb(59, 130, 246);
+.wd-btn {
+    background-color: var(--blue);
     color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    text-align: center;
+    padding: 0.75rem 1.75rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.95rem;
     text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    min-width: 140px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    display: inline-block;
 }
 
-.package-button:hover {
-    background-color: rgb(55, 126, 240);
-    transform: translateY(-2px);
+.wd-btn:hover {
+    background-color: var(--blue-hover);
+    box-shadow: 0 0 10px 2px rgba(36, 105, 217, 0.35);
+    transform: translateY(-1px);
 }
 
-.package-button:active {
-    transform: translateY(0);
+.wd-btn:active {
+    transform: translateY(1px);
 }
 
-.comparison-table, .addon-table, .custom-code-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: rgb(55, 65, 81);
-    border-radius: 0.5rem;
+.wd-btn-ghost {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.wd-btn-ghost:hover {
+    border-color: var(--blue-bright);
+    background: rgba(59, 130, 246, 0.08);
+    box-shadow: none;
+}
+
+/* ── PLAN CARDS ── */
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 4rem;
+    align-items: start;
+}
+
+.plan-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
     overflow: hidden;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
-.comparison-table th, .addon-table th, .custom-code-table th {
-    background-color: rgb(59, 130, 246);
+.plan-card:hover {
+    border-color: rgba(59, 130, 246, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.plan-header {
+    padding: 1.5rem 1.5rem 1.25rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.plan-name {
     color: white;
-    font-weight: 600;
-    padding: 0.75rem;
-    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
 }
 
-.comparison-table td, .addon-table td, .custom-code-table td {
-    padding: 0.75rem;
-    text-align: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+.plan-desc {
+    color: var(--text-muted);
+    font-size: 0.83rem;
 }
 
-.table-row:nth-child(odd) {
-    background-color: rgb(45, 55, 71);
+.plan-features {
+    padding: 1.25rem 1.5rem;
 }
 
-.table-row:hover {
-    background-color: rgb(75, 85, 101);
-    transition: background-color 0.3s ease;
-}
-
-.table-header {
-    background-color: rgb(59, 130, 246);
-    color: white;
-    font-weight: 600;
-    padding: 0.75rem;
-    text-align: center;
-}
-
-.table-cell {
-    padding: 0.75rem;
-    text-align: left;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    color: rgb(209, 213, 219);
-}
-
-.comparison-table .table-cell:first-child,
-.addon-table .table-cell:first-child,
-.custom-code-table .table-cell:first-child {
-    font-weight: 500;
-    color: rgb(209, 213, 219);
-}
-
-/* Mobile-specific styles */
-.comparison-table-mobile, .addon-table-mobile, .custom-code-table-mobile {
-    display: none;
-}
-
-.package-card, .addon-card, .custom-code-card {
-    background-color: rgb(55, 65, 81);
-    border-radius: 1rem;
-    margin-bottom: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.package-title {
-    background-color: rgb(59, 130, 246);
-    color: rgb(255, 255, 255);
-    font-size: 1.5rem;
-    border-radius: 1rem 1rem 0rem 0rem;
-    padding: 0.5rem;
-    text-align: center;
-}
-
-.feature-item, .addon-card, .custom-code-card {
+.plan-feature-row {
     display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    margin: 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    align-items: flex-start;
+    gap: 0.65rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.875rem;
 }
 
-.feature-name, .addon-name, .custom-code-name {
+.plan-feature-row:last-child {
+    border-bottom: none;
+}
+
+.feat-icon {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6rem;
+    font-weight: 800;
+    margin-top: 2px;
+}
+
+.feat-icon.yes {
+    background: rgba(52, 178, 51, 0.15);
+    color: var(--green);
+}
+
+.feat-icon.no {
+    background: rgba(207, 16, 32, 0.1);
+    color: rgba(207, 16, 32, 0.45);
+}
+
+.feat-label {
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+.feat-label.dimmed {
+    color: var(--text-muted);
+    opacity: 0.6;
+}
+
+.feat-label strong {
+    color: white;
+    font-weight: 600;
+}
+
+.plan-cta {
+    padding: 0 1.5rem 1.5rem;
+}
+
+.plan-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.7rem;
+    border-radius: 0.6rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.plan-btn-outline {
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    color: var(--blue-bright);
+    background: transparent;
+}
+
+.plan-btn-outline:hover {
+    background: rgba(59, 130, 246, 0.08);
+}
+
+.plan-btn-solid {
+    background: var(--blue);
+    color: white;
+    border: 1px solid rgba(59, 130, 246, 0.4);
+}
+
+.plan-btn-solid:hover {
+    background: var(--blue-hover);
+    box-shadow: 0 0 10px 2px rgba(36, 105, 217, 0.35);
+}
+
+/* ── ACCORDION ── */
+.accordion-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    border: none;
+    border-top: 1px solid var(--border);
+    color: var(--blue-bright);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    gap: 0.5rem;
+}
+
+.accordion-toggle:hover {
+    background: rgba(59, 130, 246, 0.06);
+    color: white;
+}
+
+.accordion-arrow {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.accordion-toggle.open .accordion-arrow {
+    transform: rotate(180deg);
+}
+
+.accordion-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+}
+
+.accordion-inner {
+    padding: 0.25rem 1.5rem 1rem;
+    border-top: 1px solid var(--border);
+}
+
+.accordion-section-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 0.9rem 0 0.4rem;
+}
+
+.accordion-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.45rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    gap: 1rem;
+}
+
+.accordion-row:last-child {
+    border-bottom: none;
+}
+
+.accordion-row span:first-child {
+    flex: 1;
+}
+
+.acc-val {
+    color: var(--text-primary);
     font-weight: 500;
-    color: rgb(207, 210, 214);
-    margin-bottom: 0.1rem;
+    text-align: right;
+    flex-shrink: 0;
 }
 
-.feature-value, .addon-description, .custom-code-pro, .custom-code-con {
-    color: rgb(167, 172, 183);
-}
-
-.custom-code-pro::before {
-    content: "Pro: ";
-    color: rgb(52, 178, 51);
-    font-weight: 600;
-}
-
-.custom-code-con::before {
-    content: "Contra: ";
-    color: rgb(207, 16, 32);
-    font-weight: 600;
-}
-
-.desktop-only {
-    display: table;
-}
-
-@media (max-width: 900px) {
-    .comparison-table {
-        display: none;
-    }
-
-    .comparison-table-mobile {
-        display: flex;
-        justify-content: center;
-        gap: 0.5rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .desktop-only {
-        display: none;
-    }
-
-    .addon-table-mobile, .custom-code-table-mobile {
-        display: block;
-    }
-
-    .addon-card {
-        padding: 1rem;
-    }
-
-    .addon-name {
-        color: rgb(101, 157, 248);
-        font-weight: 600;
-        font-size: 20px;
-    }
-
-    .addon-description {
-        color: rgb(187, 198, 207);
-        font-size: 16px;
-    }
-
-    .comparison-table-mobile {
-        display: flex;
-        gap: 0.5rem;
-    }
-
-
-    .section-title {
-        font-size: 1.5rem;
-    }
-
-    .package-button {
-        font-size: 0.9rem;
-        padding: 0.6rem 1.2rem;
-    }
-
-    .angebote-container {
-        padding: 0.5rem;
-    }
-
-    .custom-code-name {
-        color: rgb(101, 157, 248);
-        font-weight: 600;
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 625px) {
-    .comparison-table-mobile {
-        display: block;
-    }
-
-    .feature-name {
-        margin-bottom: 0px;
-    }
-
-    .feature-item {
-        padding: 0.2rem 0;
-    }
-}
-
-@media (max-width: 400px) {
-    .buttons-top {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .addon-card {
-        padding: 1rem;
-        margin: 10px;
-    }
-
-    .addon-name {
-        color: rgb(101, 157, 248);
-        font-weight: 600;
-        font-size: 20px;
-    }
-
-    .addon-description {
-        color: rgb(187, 198, 207);
-        font-size: 16px;
-    }
-
-    .package-button {
-        width: 100%;
-        max-width: 200px;
-        margin-bottom: 0.5rem;
-    }
-}
-
+/* ── CHECK / CROSS ── */
 .check-mark {
-    color: rgb(52, 178, 51);
+    color: var(--green);
     font-weight: 700;
 }
 
 .cross-mark {
-    color: rgb(207, 16, 32);
+    color: var(--red);
     font-weight: 700;
+    opacity: 0.5;
+}
+
+/* ── ADDON CARDS ── */
+.addons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+.addon-card-new {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    transition: border-color 0.25s, transform 0.25s;
+}
+
+.addon-card-new:hover {
+    border-color: rgba(59, 130, 246, 0.4);
+    transform: translateY(-2px);
+}
+
+.addon-title-new {
+    color: var(--blue-bright);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.35rem;
+}
+
+.addon-text-new {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    line-height: 1.55;
+}
+
+/* ── PROS / CONS ── */
+.pros-cons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding-bottom: 3rem;
+}
+
+.pc-col {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+}
+
+.pc-col.pros {
+    border-top: 3px solid var(--green);
+}
+
+.pc-col.cons {
+    border-top: 3px solid var(--red);
+}
+
+.pc-title {
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.pc-col.pros .pc-title {
+    color: var(--green);
+}
+
+.pc-col.cons .pc-title {
+    color: var(--red);
+}
+
+.pc-item {
+    display: flex;
+    gap: 0.6rem;
+    padding: 0.55rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.pc-item:last-child {
+    border-bottom: none;
+}
+
+.pc-item .marker {
+    flex-shrink: 0;
+    font-weight: 700;
+    margin-top: 1px;
+}
+
+.pros .marker {
+    color: var(--green);
+}
+
+.cons .marker {
+    color: var(--red);
+}
+
+/* ── DIVIDER ── */
+.wd-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+    .plans-grid {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .addons-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .wd-section {
+        padding: 2.5rem 1rem;
+    }
+
+    .addons-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pros-cons-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .wd-btn-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wd-btn {
+        width: 100%;
+        max-width: 240px;
+        text-align: center;
+    }
 }

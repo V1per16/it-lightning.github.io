@@ -371,32 +371,6 @@ body {
     box-shadow: 0 0 10px 2px rgba(59, 130, 246, 0.35);
 }
 
-.about-section {
-    padding: 4rem 0;
-    background-color: rgb(36, 45, 66);
-}
-
-.about-container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1280px;
-    padding: 1rem;
-}
-
-.about-text {
-    font-size: 1.125rem;
-    text-align: center;
-    max-width: 48rem;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-@media (min-width: 768px) {
-    .about-text {
-        font-size: 1.25rem;
-    }
-}
-
 .portfolio-section {
     padding: 4rem 0;
     background-color: rgb(31, 41, 55);
@@ -468,6 +442,32 @@ body {
     font-size: 1.25rem;
     font-weight: 600;
     letter-spacing: -0.02em;
+}
+
+.about-section {
+    padding: 4rem 0 8rem 0;
+    background-color: rgb(31, 41, 55);
+}
+
+.about-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+    padding: 1rem;
+}
+
+.about-text {
+    font-size: 1.125rem;
+    text-align: center;
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .about-text {
+        font-size: 1.25rem;
+    }
 }
 
 .testimonials-section {
@@ -572,6 +572,10 @@ body {
     padding: 2rem 0;
     background-color: rgb(17, 24, 39);
     text-align: center;
+}
+
+#agb-link {
+    text-decoration: underline;
 }
 
 .animate__animated.animate__fadeIn {
