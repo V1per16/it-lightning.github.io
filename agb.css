@@ -1,20 +1,12 @@
-/* ── CSS VARIABLES ── */
-:root {
-    --bg-page:      rgb(31, 41, 55);
-    --bg-card:      rgb(42, 49, 61);
-    --blue:         rgb(36, 99, 201);
-    --blue-bright:  rgb(59, 130, 246);
-    --text-primary: rgb(209, 213, 219);
-    --text-muted:   rgb(167, 172, 183);
-    --border:       rgba(255, 255, 255, 0.1);
-    --radius:       1rem;
-}
 
-body, .site-body {
+body,
+.site-body {
     background: var(--bg-page);
 }
 
-/* ── SECTION WRAPPER ── */
+/* =============================================================
+   SECTION WRAPPER
+   ============================================================= */
 .agb-section {
     padding: 3rem 1.25rem 5rem;
 }
@@ -28,7 +20,9 @@ body, .site-body {
     align-items: start;
 }
 
-/* ── TABLE OF CONTENTS ── */
+/* =============================================================
+   TABLE OF CONTENTS
+   ============================================================= */
 .agb-toc {
     position: sticky;
     top: 6rem;
@@ -39,7 +33,7 @@ body, .site-body {
 }
 
 .agb-toc-title {
-    color: white;
+    color: var(--text-white);
     font-size: 0.78rem;
     font-weight: 700;
     letter-spacing: 0.1em;
@@ -70,8 +64,8 @@ body, .site-body {
     font-size: 0.78rem;
     padding: 0.3rem 0.4rem;
     border-radius: 0.4rem;
-    transition: background 0.2s, color 0.2s;
     line-height: 1.4;
+    transition: background 0.2s, color 0.2s;
 }
 
 .agb-toc-list li a::before {
@@ -85,10 +79,12 @@ body, .site-body {
 
 .agb-toc-list li a:hover {
     background: rgba(59, 130, 246, 0.08);
-    color: white;
+    color: var(--text-white);
 }
 
-/* ── AGB BODY ── */
+/* =============================================================
+   AGB BODY
+   ============================================================= */
 .agb-body {
     min-width: 0;
 }
@@ -116,11 +112,11 @@ body, .site-body {
 }
 
 .agb-section-heading {
-    color: white;
+    color: var(--text-white);
     font-size: 1.2rem;
     font-weight: 700;
-    margin-bottom: 1rem;
     line-height: 1.3;
+    margin-bottom: 1rem;
 }
 
 .agb-section-block p {
@@ -139,7 +135,9 @@ body, .site-body {
     font-weight: 600;
 }
 
-/* ── LISTS ── */
+/* =============================================================
+   LISTS
+   ============================================================= */
 .agb-list {
     list-style: none;
     padding: 0;
@@ -164,12 +162,14 @@ body, .site-body {
 .agb-list li::before {
     content: '—';
     color: var(--blue-bright);
+    font-size: 0.75rem;
     font-weight: 700;
     flex-shrink: 0;
-    font-size: 0.75rem;
 }
 
-/* ── FOOTER ── */
+/* =============================================================
+   FOOTER OVERRIDE
+   ============================================================= */
 .footer {
     border-top: 1px solid var(--border);
     text-align: center;
@@ -178,7 +178,9 @@ body, .site-body {
     font-size: 0.85rem;
 }
 
-/* ── RESPONSIVE ── */
+/* =============================================================
+   RESPONSIVE
+   ============================================================= */
 @media (max-width: 760px) {
     .agb-container {
         grid-template-columns: 1fr;

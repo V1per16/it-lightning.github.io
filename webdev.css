@@ -1,31 +1,18 @@
-/* ── CSS VARIABLES ── */
-:root {
-    --bg-page:      rgb(31, 41, 55);
-    --bg-card:      rgb(42, 49, 61);
-    --bg-card-alt:  rgb(55, 65, 81);
-    --blue:         rgb(36, 99, 201);
-    --blue-bright:  rgb(62, 132, 246);
-    --blue-hover:   rgb(48, 109, 208);
-    --text-primary: rgb(209, 213, 219);
-    --text-muted:   rgb(167, 172, 183);
-    --border:       rgba(255, 255, 255, 0.1);
-    --green:        rgb(52, 178, 51);
-    --red:          rgb(207, 16, 32);
-    --radius:       1rem;
-}
 
-body, .site-body {
+body,
+.site-body {
     background: var(--bg-page);
 }
 
-/* ── SECTION WRAPPER ── */
+/* =============================================================
+   SECTION WRAPPER & HEADING
+   ============================================================= */
 .wd-section {
     max-width: 1280px;
     margin: 0 auto;
     padding: 2rem 1.25rem;
 }
 
-/* ── SECTION HEADING ── */
 .wd-heading {
     text-align: center;
     margin-top: 3rem;
@@ -33,19 +20,21 @@ body, .site-body {
 }
 
 .wd-heading h2 {
-    color: white;
+    color: var(--text-white);
     font-size: 2.2rem;
     font-weight: 700;
 }
 
 .wd-heading p {
     color: var(--text-muted);
+    font-size: 0.95rem;
     margin-top: 0.5rem;
     margin-bottom: 2rem;
-    font-size: 0.95rem;
 }
 
-/* ── BUTTONS ── */
+/* =============================================================
+   BUTTONS
+   ============================================================= */
 .wd-btn-group {
     display: flex;
     gap: 0.75rem;
@@ -54,8 +43,9 @@ body, .site-body {
 }
 
 .wd-btn {
+    display: inline-block;
     background-color: var(--blue);
-    color: white;
+    color: var(--text-white);
     padding: 0.75rem 1.75rem;
     border-radius: 9999px;
     font-weight: 600;
@@ -64,7 +54,6 @@ body, .site-body {
     border: none;
     cursor: pointer;
     transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    display: inline-block;
 }
 
 .wd-btn:hover {
@@ -89,7 +78,9 @@ body, .site-body {
     box-shadow: none;
 }
 
-/* ── PLAN CARDS ── */
+/* =============================================================
+   PLAN CARDS
+   ============================================================= */
 .plans-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -118,7 +109,7 @@ body, .site-body {
 }
 
 .plan-name {
-    color: white;
+    color: var(--text-white);
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 0.25rem;
@@ -181,7 +172,7 @@ body, .site-body {
 }
 
 .feat-label strong {
-    color: white;
+    color: var(--text-white);
     font-weight: 600;
 }
 
@@ -213,7 +204,7 @@ body, .site-body {
 
 .plan-btn-solid {
     background: var(--blue);
-    color: white;
+    color: var(--text-white);
     border: 1px solid rgba(59, 130, 246, 0.4);
 }
 
@@ -222,12 +213,15 @@ body, .site-body {
     box-shadow: 0 0 10px 2px rgba(36, 105, 217, 0.35);
 }
 
-/* ── ACCORDION ── */
+/* =============================================================
+   ACCORDION
+   ============================================================= */
 .accordion-toggle {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 0.5rem;
     padding: 0.75rem 1.5rem;
     background: transparent;
     border: none;
@@ -237,12 +231,11 @@ body, .site-body {
     font-weight: 600;
     cursor: pointer;
     transition: background 0.2s, color 0.2s;
-    gap: 0.5rem;
 }
 
 .accordion-toggle:hover {
     background: rgba(59, 130, 246, 0.06);
-    color: white;
+    color: var(--text-white);
 }
 
 .accordion-arrow {
@@ -280,11 +273,11 @@ body, .site-body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1rem;
     padding: 0.45rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     font-size: 0.82rem;
     color: var(--text-muted);
-    gap: 1rem;
 }
 
 .accordion-row:last-child {
@@ -302,7 +295,9 @@ body, .site-body {
     flex-shrink: 0;
 }
 
-/* ── CHECK / CROSS ── */
+/* =============================================================
+   CHECK / CROSS
+   ============================================================= */
 .check-mark {
     color: var(--green);
     font-weight: 700;
@@ -314,7 +309,9 @@ body, .site-body {
     opacity: 0.5;
 }
 
-/* ── ADDON CARDS ── */
+/* =============================================================
+   ADDON CARDS
+   ============================================================= */
 .addons-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -348,7 +345,9 @@ body, .site-body {
     line-height: 1.55;
 }
 
-/* ── PROS / CONS ── */
+/* =============================================================
+   PROS / CONS
+   ============================================================= */
 .pros-cons-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -414,7 +413,9 @@ body, .site-body {
     color: var(--red);
 }
 
-/* ── DIVIDER ── */
+/* =============================================================
+   DIVIDER
+   ============================================================= */
 .wd-divider {
     border: none;
     border-top: 1px solid var(--border);
@@ -422,7 +423,9 @@ body, .site-body {
     margin: 0 auto;
 }
 
-/* ── RESPONSIVE ── */
+/* =============================================================
+   RESPONSIVE
+   ============================================================= */
 @media (max-width: 900px) {
     .plans-grid {
         grid-template-columns: 1fr;
@@ -441,10 +444,7 @@ body, .site-body {
         padding: 2.5rem 1rem;
     }
 
-    .addons-grid {
-        grid-template-columns: 1fr;
-    }
-
+    .addons-grid,
     .pros-cons-grid {
         grid-template-columns: 1fr;
     }
