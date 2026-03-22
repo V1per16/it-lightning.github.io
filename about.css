@@ -12,15 +12,24 @@
 }
 
 #about-us-container {
-    max-width: 60rem;
-    padding: 1.5rem;
-    border-radius: 20px;
-    background-color: var(--bg-card-dark);
-    text-align: center;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+}
+
+#about-us-container:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0 20px 5px rgba(50, 50, 50, 0.35);
 }
 
 #about-us-container h3 {
-    position: relative;
     display: inline-block;
     font-size: 2.25rem;
     font-weight: 700;

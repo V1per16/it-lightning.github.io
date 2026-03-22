@@ -5,7 +5,7 @@
     /* Backgrounds */
     --bg-body:          rgb(17, 24, 39);
     --bg-page:          rgb(31, 41, 55);
-    --bg-card:          rgb(42, 49, 61);
+    --bg-card:          rgba(55, 65, 81, 0.7);
     --bg-card-alt:      rgb(55, 65, 81);
     --bg-card-hover:    rgb(57, 67, 83);
     --bg-section:       #252e41;
