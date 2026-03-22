@@ -66,18 +66,6 @@ body,
     transform: translateY(1px);
 }
 
-.wd-btn-ghost {
-    background: transparent;
-    color: var(--text-primary);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.wd-btn-ghost:hover {
-    border-color: var(--blue-bright);
-    background: rgba(59, 130, 246, 0.08);
-    box-shadow: none;
-}
-
 /* =============================================================
    PLAN CARDS
    ============================================================= */
@@ -106,6 +94,8 @@ body,
 }
 
 .plan-header {
+    display: flex;
+    justify-content: space-between;
     padding: 1.5rem 1.5rem 1.25rem;
     border-bottom: 1px solid var(--border);
 }
@@ -216,85 +206,81 @@ body,
 }
 
 /* =============================================================
-   ACCORDION
+   PROZESS-ABSCHNITT
    ============================================================= */
-.accordion-toggle {
-    width: 100%;
+
+.wd-process-section {
+    max-width: 1280px;
+    margin: 4rem auto;
+    padding: 0 1.25rem;
+}
+
+.process-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.process-step {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    padding: 1.75rem 1.5rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.process-step:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px 2px rgba(79, 79, 79, 0.35);
+}
+
+.step-number {
+    position: absolute;
+    top: -14px;
+    left: 24px;
+    background: var(--blue);
+    color: white;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    background: transparent;
-    border: none;
-    border-top: 1px solid var(--border);
-    color: var(--blue-bright);
-    font-size: 0.85rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s;
-}
-
-.accordion-toggle:hover {
-    background: rgba(59, 130, 246, 0.06);
-    color: var(--text-white);
-}
-
-.accordion-arrow {
-    width: 16px;
-    height: 16px;
-    flex-shrink: 0;
-    transition: transform 0.3s ease;
-}
-
-.accordion-toggle.open .accordion-arrow {
-    transform: rotate(180deg);
-}
-
-.accordion-panel {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.35s ease;
-}
-
-.accordion-inner {
-    padding: 0.25rem 1.5rem 1rem;
-    border-top: 1px solid var(--border);
-}
-
-.accordion-section-title {
-    font-size: 0.7rem;
+    justify-content: center;
     font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    font-size: 1.2rem;
+    border: 3px solid var(--bg-page);
+}
+
+.process-step h3 {
+    color: var(--text-white);
+    font-size: 1.25rem;
+    margin: 0.75rem 0 0.75rem;
+}
+
+.process-step p {
     color: var(--text-muted);
-    padding: 0.9rem 0 0.4rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
 }
 
-.accordion-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 0.45rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    font-size: 0.82rem;
-    color: var(--text-muted);
+.process-cta {
+    text-align: center;
+    margin-top: 2rem;
 }
 
-.accordion-row:last-child {
-    border-bottom: none;
-}
-
-.accordion-row span:first-child {
-    flex: 1;
-}
-
-.acc-val {
-    color: var(--text-primary);
-    font-weight: 500;
-    text-align: right;
-    flex-shrink: 0;
+/* Responsive Anpassungen */
+@media (max-width: 640px) {
+    .process-steps-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .step-number {
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 /* =============================================================

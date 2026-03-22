@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (arrowDownBtn) {
         arrowDownBtn.addEventListener('click', function() {
             // Try scrolling to #angebote first (for angebote_vergleich.html), then #services (for index.html)
-            const targetElement = document.getElementById('angebote') || document.getElementById('services') || document.getElementById('support-list-section') || document.getElementById('about-us-section');
+            const targetElement = document.getElementById('angebote') || document.getElementById('services') || document.getElementById('support-list-section') || document.getElementById('about-us-section') || document.getElementById('webdev-body');
             if (targetElement) {
                 targetElement.scrollIntoView({ behavior: 'smooth' });
             }

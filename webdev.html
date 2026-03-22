@@ -58,152 +58,136 @@
             </div>
         </section>
 
-        <!-- PLAN CARDS -->
-        <div class="wd-section" style="padding-top:1rem;">
+        <!-- PLAN CARDS - überarbeitete Version -->
+        <div class="wd-section" id="webdev-body">
             <div class="wd-heading">
-                <h2>Service-Paket Übersicht</h2>
-                <p>Wähle das Paket, das zu deinem Projekt passt.</p>
+                <h2>Typische Projektumfänge</h2>
+                <p>Hier siehst du typische Inhalte und ungefähre Aufwände - der tatsächliche Preis entsteht aus deinem Projekt und realem Arbeitsaufwand (80 CHF/h).</p>
                 <div class="wd-btn-group">
-                    <a href="rechner.html" class="wd-btn">Preis Rechner</a>
-                    <a href="kontakt.html" class="wd-btn wd-btn-ghost">Kontaktiere uns</a>
+                    <a href="kontakt.html" class="wd-btn">Kostenloses Erstgespräch buchen</a>
                 </div>
             </div>
+
             <div class="plans-grid">
-
-                <!-- LITE -->
+                <!-- Starter / Lite -->
                 <div class="plan-card">
                     <div class="plan-header">
-                        <div class="plan-name">Lite</div>
-                        <div class="plan-desc">Einfache Präsenz & Visitenkarte</div>
-                    </div>
-                    <div class="plan-features">
-                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label"><strong>3 Seiten</strong> inklusive</div></div>
-                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label"><strong>Bis zu 4 Bilder</strong></div></div>
-                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label"><strong>Grundlegendes SEO</strong></div></div>
-                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label"><strong>2h Beratung</strong></div></div>
-                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label">Mobile-optimiert</div></div>
-                        <div class="plan-feature-row"><div class="feat-icon no">✕</div><div class="feat-label dimmed">Formulare</div></div>
-                        <div class="plan-feature-row"><div class="feat-icon no">✕</div><div class="feat-label dimmed">Blog & Newsletter</div></div>
-                        <div class="plan-feature-row"><div class="feat-icon no">✕</div><div class="feat-label dimmed">E-Commerce</div></div>
-                    </div>
-                    <button class="accordion-toggle" onclick="toggleAccordion(this)">
-                        <span class="accordion-label">Alle Details anzeigen</span>
-                        <svg class="accordion-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-                    </button>
-                    <div class="accordion-panel">
-                        <div class="accordion-inner">
-                            <div class="accordion-section-title">Seiten & Medien</div>
-                            <div class="accordion-row"><span>Maximale Seitenanzahl</span><span class="acc-val">3 Seiten</span></div>
-                            <div class="accordion-row"><span>Bilder / Fotos</span><span class="acc-val">Bis zu 4</span></div>
-                            <div class="accordion-row"><span>Videos</span><span class="acc-val cross-mark">✘</span></div>
-                            <div class="accordion-section-title">SEO & Beratung</div>
-                            <div class="accordion-row"><span>SEO-Optimierung</span><span class="acc-val">Grundlegend</span></div>
-                            <div class="accordion-row"><span>Beratungsstunden</span><span class="acc-val">2 Stunden</span></div>
-                            <div class="accordion-section-title">Funktionen</div>
-                            <div class="accordion-row"><span>Mobile Ansicht</span><span class="acc-val check-mark">✔</span></div>
-                            <div class="accordion-row"><span>Formulare</span><span class="acc-val cross-mark">✘</span></div>
-                            <div class="accordion-row"><span>Blog</span><span class="acc-val cross-mark">✘</span></div>
-                            <div class="accordion-row"><span>Newsletter</span><span class="acc-val cross-mark">✘</span></div>
-                            <div class="accordion-row"><span>Cookie / Datenschutzseite</span><span class="acc-val cross-mark">✘</span></div>
-                            <div class="accordion-row"><span>Kunden- / Mitgliederbereich</span><span class="acc-val cross-mark">✘</span></div>
-                            <div class="accordion-row"><span>Abonnementsystem</span><span class="acc-val cross-mark">✘</span></div>
-                            <div class="accordion-row"><span>Zahlungsmethoden-Integration</span><span class="acc-val cross-mark">✘</span></div>
-                            <div class="accordion-row"><span>E-Commerce</span><span class="acc-val cross-mark">✘</span></div>
+                        <div class="plan-header-title">
+                            <div class="plan-name">Starter / Lite</div>
+                            <div class="plan-desc">Visitenkarte, Onepager, kleine Präsenz</div>
                         </div>
+
+                        <div class="plan-price">ab 400.-</div>
                     </div>
-                    <div class="plan-cta"><a href="kontakt.html" class="plan-btn plan-btn-outline">Anfragen</a></div>
+
+                    <div class="plan-features">
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label">1-4 Seiten</div></div>
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label">Grund-SEO & Mobile-Optimierung</div></div>
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label">Kontaktformular & Datenschutzseite</div></div>
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label">Typischer Aufwand: 6-18 Stunden</div></div>
+                        <div class="plan-feature-row"><div class="feat-icon no">✕</div><div class="feat-label dimmed">Komplexe Funktionen (Shop / Login / Abos)</div></div>
+                    </div>
+                    <div class="plan-cta">
+                        <a href="kontakt.html" class="plan-btn plan-btn-outline">Jetzt anfragen</a>
+                    </div>
                 </div>
 
-                <!-- BASIC -->
+                <!-- Business / Klassik -->
                 <div class="plan-card">
                     <div class="plan-header">
-                        <div class="plan-name">Basic</div>
-                        <div class="plan-desc">Perfekt für kleine Unternehmen</div>
-                    </div>
-                    <div class="plan-features">
-                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label"><strong>5 Seiten</strong> inklusive</div></div>
-                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label"><strong>Bis zu 8 Bilder</strong></div></div>
-                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label"><strong>Fortgeschrittenes SEO</strong></div></div>
-                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label"><strong>3h Beratung</strong></div></div>
-                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label">Mobile-optimiert</div></div>
-                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label">Formulare</div></div>
-                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label">Blog, Newsletter, Datenschutz</div></div>
-                        <div class="plan-feature-row"><div class="feat-icon no">✕</div><div class="feat-label dimmed">E-Commerce</div></div>
-                    </div>
-                    <button class="accordion-toggle" onclick="toggleAccordion(this)">
-                        <span class="accordion-label">Alle Details anzeigen</span>
-                        <svg class="accordion-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-                    </button>
-                    <div class="accordion-panel">
-                        <div class="accordion-inner">
-                            <div class="accordion-section-title">Seiten & Medien</div>
-                            <div class="accordion-row"><span>Maximale Seitenanzahl</span><span class="acc-val">5 Seiten</span></div>
-                            <div class="accordion-row"><span>Bilder / Fotos</span><span class="acc-val">Bis zu 8</span></div>
-                            <div class="accordion-row"><span>Videos</span><span class="acc-val cross-mark">✘</span></div>
-                            <div class="accordion-section-title">SEO & Beratung</div>
-                            <div class="accordion-row"><span>SEO-Optimierung</span><span class="acc-val">Fortgeschritten</span></div>
-                            <div class="accordion-row"><span>Beratungsstunden</span><span class="acc-val">3 Stunden</span></div>
-                            <div class="accordion-section-title">Funktionen</div>
-                            <div class="accordion-row"><span>Mobile Ansicht</span><span class="acc-val check-mark">✔</span></div>
-                            <div class="accordion-row"><span>Formulare</span><span class="acc-val check-mark">✔</span></div>
-                            <div class="accordion-row"><span>Blog</span><span class="acc-val check-mark">✔</span></div>
-                            <div class="accordion-row"><span>Newsletter</span><span class="acc-val check-mark">✔</span></div>
-                            <div class="accordion-row"><span>Cookie / Datenschutzseite</span><span class="acc-val check-mark">✔</span></div>
-                            <div class="accordion-row"><span>Kunden- / Mitgliederbereich</span><span class="acc-val cross-mark">✘</span></div>
-                            <div class="accordion-row"><span>Abonnementsystem</span><span class="acc-val cross-mark">✘</span></div>
-                            <div class="accordion-row"><span>Zahlungsmethoden-Integration</span><span class="acc-val cross-mark">✘</span></div>
-                            <div class="accordion-row"><span>E-Commerce</span><span class="acc-val cross-mark">✘</span></div>
+                        <div class="plan-header-title">
+                            <div class="plan-name">Business / Klassik</div>
+                            <div class="plan-desc">Professionelle kleine Unternehmensseite</div>
                         </div>
+
+                        <div class="plan-price">ab 800.-</div>
                     </div>
-                    <div class="plan-cta"><a href="kontakt.html" class="plan-btn plan-btn-outline">Anfragen</a></div>
+                    
+                    <div class="plan-features">
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label">4-10 Seiten</div></div>
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label">Blog, Newsletter, mehrere Formulare</div></div>
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label">Fortgeschrittenes SEO</div></div>
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label">Typischer Aufwand: 15-35 Stunden</div></div>
+                        <div class="plan-feature-row"><div class="feat-icon no">✕</div><div class="feat-label dimmed">Onlineshop oder Mitgliederbereich</div></div>
+                    </div>
+                    <div class="plan-cta">
+                        <a href="kontakt.html" class="plan-btn plan-btn-outline">Kostenloses Gespräch vereinbaren</a>
+                    </div>
                 </div>
 
-                <!-- PREMIUM -->
+                <!-- Individual / Pro -->
                 <div class="plan-card">
                     <div class="plan-header">
-                        <div class="plan-name">Premium</div>
-                        <div class="plan-desc">Für Online-Shops & grosse Projekte</div>
-                    </div>
-                    <div class="plan-features">
-                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label"><strong>10 Seiten</strong> inklusive</div></div>
-                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label"><strong>Bis zu 10 Bilder / Videos</strong></div></div>
-                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label"><strong>Professionelles SEO</strong></div></div>
-                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label"><strong>4h Beratung</strong></div></div>
-                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label">Mobile-optimiert</div></div>
-                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label">Formulare, Blog, Newsletter</div></div>
-                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label">Kunden- & Mitgliederbereich</div></div>
-                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label">E-Commerce & Zahlungen</div></div>
-                    </div>
-                    <button class="accordion-toggle" onclick="toggleAccordion(this)">
-                        <span class="accordion-label">Alle Details anzeigen</span>
-                        <svg class="accordion-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-                    </button>
-                    <div class="accordion-panel">
-                        <div class="accordion-inner">
-                            <div class="accordion-section-title">Seiten & Medien</div>
-                            <div class="accordion-row"><span>Maximale Seitenanzahl</span><span class="acc-val">10 Seiten</span></div>
-                            <div class="accordion-row"><span>Bilder / Fotos</span><span class="acc-val">Bis zu 10</span></div>
-                            <div class="accordion-row"><span>Videos</span><span class="acc-val check-mark">✔</span></div>
-                            <div class="accordion-section-title">SEO & Beratung</div>
-                            <div class="accordion-row"><span>SEO-Optimierung</span><span class="acc-val">Professionell</span></div>
-                            <div class="accordion-row"><span>Beratungsstunden</span><span class="acc-val">4 Stunden</span></div>
-                            <div class="accordion-section-title">Funktionen</div>
-                            <div class="accordion-row"><span>Mobile Ansicht</span><span class="acc-val check-mark">✔</span></div>
-                            <div class="accordion-row"><span>Formulare</span><span class="acc-val check-mark">✔</span></div>
-                            <div class="accordion-row"><span>Blog</span><span class="acc-val check-mark">✔</span></div>
-                            <div class="accordion-row"><span>Newsletter</span><span class="acc-val check-mark">✔</span></div>
-                            <div class="accordion-row"><span>Cookie / Datenschutzseite</span><span class="acc-val check-mark">✔</span></div>
-                            <div class="accordion-row"><span>Kunden- / Mitgliederbereich</span><span class="acc-val check-mark">✔</span></div>
-                            <div class="accordion-row"><span>Abonnementsystem</span><span class="acc-val check-mark">✔</span></div>
-                            <div class="accordion-row"><span>Zahlungsmethoden-Integration</span><span class="acc-val check-mark">✔</span></div>
-                            <div class="accordion-row"><span>E-Commerce</span><span class="acc-val check-mark">✔</span></div>
+                        <div class="plan-header-title">
+                            <div class="plan-name">Individual / Pro</div>
+                            <div class="plan-desc">Mit Shop, Login, Sonderfunktionen</div>
                         </div>
-                    </div>
-                    <div class="plan-cta"><a href="kontakt.html" class="plan-btn plan-btn-outline">Anfragen</a></div>
-                </div>
 
+                        <div class="plan-price">ab 1200.-</div>
+                    </div>
+
+                    <div class="plan-features">
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label">Individueller Umfang - alles möglich</div></div>
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label">E-Commerce, Zahlungen, Mitgliederbereich</div></div>
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label">Professionelles SEO & Performance</div></div>
+                        <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label">Typischer Aufwand: ab 30 Stunden</div></div>
+                    </div>
+                    <div class="plan-cta">
+                        <a href="kontakt.html" class="plan-btn plan-btn-outline">Projekt besprechen</a>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- PROZESS-ABSCHNITT -->
+        <section class="wd-process-section">
+            <div class="wd-heading">
+                <h2>So läuft die Zusammenarbeit ab</h2>
+                <p>Transparent, kompetent, persönlich</p>
+            </div>
+
+            <div class="process-steps-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Kostenloses Erstgespräch</h3>
+                    <p>30-45 Min. via Telefon oder Zoom. Wir klären deine Idee, Ziele und groben Rahmen. Erste realistische Einschätzung - unverbindlich.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Erstes Konzept (Figma)</h3>
+                    <p>Ich erstelle ein individuelles Grunddesign (ca. 4-6 Std.). Du siehst schon, wie deine Seite aussehen könnte - bevor du zahlst.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Besprechung & Entscheidung</h3>
+                    <p>Wir gehen das Konzept durch. Gefällt es dir? Möchtest du eine Änderung? Bis hier hin entscheidest du ohne Kosten.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Kick-off + Anzahlung</h3>
+                    <p>Einfacher Vertrag + Anzahlung 250 CHF. Start mit den ersten 5-8 Stunden Umsetzung.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <h3>Review & deine Sicherheit</h3>
+                    <p>Du siehst die erste Version. Innerhalb von 10 Tagen kannst du abbrechen → <strong>150 CHF Rückerstattung</strong> (du zahlst effektiv nur ~100 CHF).</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <h3>Weiterarbeit & Abrechnung</h3>
+                    <p>Stundensatz: <strong>80 CHF/h</strong> (exkl. MwSt.). Monatliche oder meilensteinbasierte Abrechnung - volle Transparenz.</p>
+                </div>
+            </div>
+
+            <div class="process-cta">
+                <a href="kontakt.html" class="wd-btn">Jetzt kostenloses Erstgespräch buchen</a>
+            </div>
+        </section>
 
         <hr class="wd-divider">
 
