@@ -67,13 +67,19 @@
                     <a href="kontakt.html" class="wd-btn">Kostenloses Erstgespräch buchen</a>
                 </div>
             </div>
+            
+            <div class="tab-btns-wrapper">
+                <button class="tablinks" data-tab="basic-card" onclick="wrappedShowPlan(event, 'basic-card')">Basic</button>
+                <button class="tablinks" data-tab="klassik-card" onclick="wrappedShowPlan(event, 'klassik-card')">Klassik</button>
+                <button class="tablinks" data-tab="pro-card" onclick="wrappedShowPlan(event, 'pro-card')">Pro</button>
+            </div>
 
             <div class="plans-grid">
-                <!-- Starter / Lite -->
-                <div class="plan-card">
+                <!-- Basic -->
+                <div class="plan-card" id="basic-card">
                     <div class="plan-header">
                         <div class="plan-header-title">
-                            <div class="plan-name">Starter / Lite</div>
+                            <div class="plan-name">Basic</div>
                             <div class="plan-desc">Visitenkarte, Onepager, kleine Präsenz</div>
                         </div>
 
@@ -88,15 +94,15 @@
                         <div class="plan-feature-row"><div class="feat-icon no">✕</div><div class="feat-label dimmed">Komplexe Funktionen (Shop / Login / Abos)</div></div>
                     </div>
                     <div class="plan-cta">
-                        <a href="kontakt.html" class="plan-btn plan-btn-outline">Jetzt anfragen</a>
+                        <a href="kontakt.html" class="plan-btn">Jetzt anfragen</a>
                     </div>
                 </div>
 
-                <!-- Business / Klassik -->
-                <div class="plan-card">
+                <!-- Klassik -->
+                <div class="plan-card" id="klassik-card">
                     <div class="plan-header">
                         <div class="plan-header-title">
-                            <div class="plan-name">Business / Klassik</div>
+                            <div class="plan-name">Klassik</div>
                             <div class="plan-desc">Professionelle kleine Unternehmensseite</div>
                         </div>
 
@@ -111,15 +117,15 @@
                         <div class="plan-feature-row"><div class="feat-icon no">✕</div><div class="feat-label dimmed">Onlineshop oder Mitgliederbereich</div></div>
                     </div>
                     <div class="plan-cta">
-                        <a href="kontakt.html" class="plan-btn plan-btn-outline">Kostenloses Gespräch vereinbaren</a>
+                        <a href="kontakt.html" class="plan-btn">Kostenloses Gespräch vereinbaren</a>
                     </div>
                 </div>
 
-                <!-- Individual / Pro -->
-                <div class="plan-card">
+                <!-- Pro -->
+                <div class="plan-card" id="pro-card">
                     <div class="plan-header">
                         <div class="plan-header-title">
-                            <div class="plan-name">Individual / Pro</div>
+                            <div class="plan-name">Pro</div>
                             <div class="plan-desc">Mit Shop, Login, Sonderfunktionen</div>
                         </div>
 
@@ -133,7 +139,7 @@
                         <div class="plan-feature-row"><div class="feat-icon yes">✓</div><div class="feat-label">Typischer Aufwand: ab 30 Stunden</div></div>
                     </div>
                     <div class="plan-cta">
-                        <a href="kontakt.html" class="plan-btn plan-btn-outline">Projekt besprechen</a>
+                        <a href="kontakt.html" class="plan-btn">Projekt besprechen</a>
                     </div>
                 </div>
             </div>
@@ -247,14 +253,14 @@
                 </div>
                 <div class="pc-col cons">
                     <div class="pc-title">Nachteile</div>
-                    <div class="pc-item"><span class="marker">−</span>Komplex und erfordert umfassendes technisches Wissen.</div>
-                    <div class="pc-item"><span class="marker">−</span>Extrem zeitaufwändig, besonders bei grösseren Projekten.</div>
-                    <div class="pc-item"><span class="marker">−</span>Langfristige Skalierbarkeit schwierig bei suboptimalem Code.</div>
-                    <div class="pc-item"><span class="marker">−</span>Höhere indirekte Kosten durch den Zeitaufwand.</div>
-                    <div class="pc-item"><span class="marker">−</span>Höhere Wahrscheinlichkeit für Bugs und Sicherheitslücken.</div>
-                    <div class="pc-item"><span class="marker">−</span>Ohne Frameworks fehlt Zugang zu vorgefertigten Funktionen.</div>
-                    <div class="pc-item"><span class="marker">−</span>Manuelles Implementieren von responsivem Design ist aufwändig.</div>
-                    <div class="pc-item"><span class="marker">−</span>Alle Updates und Sicherheitsmassnahmen selbst durchführen.</div>
+                    <div class="pc-item"><span class="marker">-</span>Komplex und erfordert umfassendes technisches Wissen.</div>
+                    <div class="pc-item"><span class="marker">-</span>Extrem zeitaufwändig, besonders bei grösseren Projekten.</div>
+                    <div class="pc-item"><span class="marker">-</span>Langfristige Skalierbarkeit schwierig bei suboptimalem Code.</div>
+                    <div class="pc-item"><span class="marker">-</span>Höhere indirekte Kosten durch den Zeitaufwand.</div>
+                    <div class="pc-item"><span class="marker">-</span>Höhere Wahrscheinlichkeit für Bugs und Sicherheitslücken.</div>
+                    <div class="pc-item"><span class="marker">-</span>Ohne Frameworks fehlt Zugang zu vorgefertigten Funktionen.</div>
+                    <div class="pc-item"><span class="marker">-</span>Manuelles Implementieren von responsivem Design ist aufwändig.</div>
+                    <div class="pc-item"><span class="marker">-</span>Alle Updates und Sicherheitsmassnahmen selbst durchführen.</div>
                 </div>
             </div>
         </div>
@@ -275,6 +281,59 @@
                 label.textContent = isOpen ? 'Alle Details anzeigen' : 'Details ausblenden';
                 panel.style.maxHeight = isOpen ? '0' : panel.scrollHeight + 'px';
             }
+
+            function showPlan(evt, tabname) {
+                if (window.innerWidth > 900) {
+                    return;
+                }
+
+                var i, tabcontent, tablinks;
+
+                tabcontent = document.getElementsByClassName("plan-card");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].classList.remove("active-plan");
+                }
+
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+
+                document.getElementById(tabname).classList.add("active-plan");
+
+                if (evt && evt.currentTarget) {
+                    evt.currentTarget.className += " active";
+                } else {
+                    for (i = 0; i < tablinks.length; i++) {
+                        if (tablinks[i].getAttribute("data-tab") === tabname) {
+                            tablinks[i].className += " active";
+                            break;
+                        }
+                    }
+                }
+            }
+
+            // Track which tab is currently "selected" so we can restore it on resize
+            var currentTab = "basic-card";
+
+            function wrappedShowPlan(evt, tabname) {
+                currentTab = tabname;
+                showPlan(evt, tabname);
+            }
+
+            window.addEventListener("DOMContentLoaded", function () {
+                showPlan(null, currentTab);
+            });
+
+            // Watch for the screen crossing the 900px breakpoint
+            var mobileQuery = window.matchMedia("(max-width: 900px)");
+
+            mobileQuery.addEventListener("change", function (e) {
+                if (e.matches) {
+                    // Just dropped below 900px — show the last active tab
+                    showPlan(null, currentTab);
+                }
+            });
         </script>
     </body>
 </html>

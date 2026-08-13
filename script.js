@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (hamburgerBtn && mobileMenu) {
         hamburgerBtn.addEventListener('click', function() {
-            mobileMenu.classList.toggle('hidden');
             mobileMenu.classList.toggle('show');
             hamburgerBtn.classList.toggle('active');
         });
@@ -13,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Close mobile menu and dropdowns when clicking outside
         document.addEventListener('click', function(e) {
             if (!mobileMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
-                mobileMenu.classList.add('hidden');
                 mobileMenu.classList.remove('show');
                 hamburgerBtn.classList.remove('active');
                 // Close all dropdowns
@@ -25,8 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     document.querySelectorAll('.nav-link-mobile.dropdown-toggle').forEach(el => {
-    el.addEventListener('click', () => {
-        el.classList.toggle('active');
+        el.addEventListener('click', () => {
+            el.classList.toggle('active');
         });
     });
 
@@ -52,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 targetElement.scrollIntoView({ behavior: 'smooth' });
                 // Close mobile menu and dropdowns after clicking a link
                 if (mobileMenu) {
-                    mobileMenu.classList.add('hidden');
                     mobileMenu.classList.remove('show');
                     hamburgerBtn.classList.remove('active');
                     document.querySelectorAll('.dropdown-menu').forEach(menu => {
@@ -65,14 +62,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // JavaScript (put in <script> tag or external file)
     window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.nav-bar');
-    
-    // Change threshold as you like (e.g. 150, 300, window.innerHeight * 0.6, ...)
-    if (window.scrollY > 120) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
+        const navbar = document.querySelector('.nav-bar');
+
+        // Change threshold as you like (e.g. 150, 300, window.innerHeight * 0.6, ...)
+        if (window.scrollY > 120) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
     });
 
     // Arrow down button

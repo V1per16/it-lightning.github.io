@@ -6,6 +6,7 @@
     --bg-body:          rgb(17, 24, 39);
     --bg-page:          rgb(31, 41, 55);
     --bg-card:          rgba(55, 65, 81, 0.7);
+    --bg-card-darker:   rgba(55, 65, 81, 0.3);
     --bg-card-alt:      rgb(55, 65, 81);
     --bg-card-hover:    rgb(57, 67, 83);
     --bg-section:       #252e41;
@@ -216,23 +217,27 @@ body,
     right: 1rem;
     top: 4rem;
     background-color: rgba(31, 41, 55, 0.95);
-    border-radius: 0.5rem;
+    border-radius: 1rem;
+    border-style: solid;
+    border-color: var(--border);
+    border-width: 1px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     width: 12rem;
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
     padding: 1rem 1.5rem;
     z-index: 50;
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    transform: translateY(-10px);
+    transform: translateX(20px);
+    visibility: hidden;
     opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 .mobile-menu.show {
-    display: flex;
-    transform: translateY(0);
+    visibility: visible;
+    transform: translateX(0);
     opacity: 0.98;
 }
 
@@ -257,7 +262,6 @@ body,
     margin-left: 0.5rem;
     font-size: 0.75rem;
     color: var(--text-white);
-    transition: ease 0.1s;
 }
 
 .nav-link-mobile.dropdown-toggle.active::after {
@@ -399,8 +403,8 @@ body,
 
 .service-card {
     background: rgba(55, 65, 81, 0.7);
-    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     border: 1px solid var(--border);
     border-radius: 2rem;
     padding: 2rem;

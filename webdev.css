@@ -69,6 +69,11 @@ body,
 /* =============================================================
    PLAN CARDS
    ============================================================= */
+
+.tab-btns-wrapper {
+    display: none;
+}
+
 .plans-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -80,8 +85,8 @@ body,
 .plan-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
-    border-radius: 1rem;
-    padding: 1em;
+    border-radius: 2rem;
+    padding: 0.5rem;
     display: flex;
     flex-direction: column;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -118,28 +123,27 @@ body,
 
 .plan-feature-row {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 0.65rem;
-    padding: 0.5rem 0;
+    padding: 1rem 0;
     border-bottom: 1px solid var(--border);
-    font-size: 0.875rem;
 }
 
 .plan-feature-row:last-child {
     border-bottom: none;
+    margin-bottom: 1rem;
 }
 
 .feat-icon {
     flex-shrink: 0;
-    width: 18px;
-    height: 18px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     font-weight: 800;
-    margin-top: 2px;
 }
 
 .feat-icon.yes {
@@ -148,19 +152,19 @@ body,
 }
 
 .feat-icon.no {
-    background: rgba(207, 16, 32, 0.1);
-    color: rgba(207, 16, 32, 0.45);
+    background: rgba(207, 16, 32, 0.144);
+    color: rgba(207, 16, 32, 0.7);
 }
 
 .feat-label {
     color: var(--text-primary);
-    font-size: 0.875rem;
+    font-size: 0.95rem;
     line-height: 1.4;
 }
 
 .feat-label.dimmed {
     color: var(--text-muted);
-    opacity: 0.6;
+    opacity: 0.9;
 }
 
 .feat-label strong {
@@ -173,36 +177,22 @@ body,
 }
 
 .plan-btn {
+    background-color: var(--blue);
+    color: var(--text-primary);
     display: block;
     width: 100%;
     text-align: center;
-    padding: 0.7rem;
-    border-radius: 0.6rem;
+    padding: 0.8rem;
+    border-radius: 2rem;
     font-weight: 600;
     font-size: 0.875rem;
     text-decoration: none;
-    transition: all 0.25s ease;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.plan-btn-outline {
-    border: 1px solid rgba(59, 130, 246, 0.4);
-    color: var(--blue-bright);
-    background: transparent;
-}
-
-.plan-btn-outline:hover {
-    background: rgba(59, 130, 246, 0.08);
-}
-
-.plan-btn-solid {
-    background: var(--blue);
-    color: var(--text-white);
-    border: 1px solid rgba(59, 130, 246, 0.4);
-}
-
-.plan-btn-solid:hover {
-    background: var(--blue-hover);
-    box-shadow: 0 0 10px 2px rgba(36, 105, 217, 0.35);
+.plan-btn:hover {
+    background-color: var(--blue-hover);
+    box-shadow: 0 0 10px 2px rgba(59, 130, 246, 0.35);
 }
 
 /* =============================================================
@@ -415,11 +405,65 @@ body,
    RESPONSIVE
    ============================================================= */
 @media (max-width: 900px) {
+    .tab-btns-wrapper {
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .tablinks {
+        flex: 1;
+        text-align: center;
+        height: 3rem;
+        border-width: 1px;
+        border-style: solid;
+        border-color: var(--bg-card-hover);
+        border-bottom: none;
+        background-color: var(--bg-card-darker);
+        transition: background-color .4s cubic-bezier(.62,.48,.33,.9);
+    }
+
+    .tablinks:hover {
+        background-color: var(--bg-card-alt);
+    }
+
+    .tablinks.active {
+        background-color: var(--bg-card);
+    }
+    
+    [data-tab="basic-card"] {
+        border-radius: 2rem 0 0 0;
+        border-right: none;
+    }
+
+    [data-tab="klassik-card"] {
+        border-radius: 0 0 0 0;
+    }
+
+    [data-tab="pro-card"] {
+        border-radius: 0 2rem 0 0;
+        border-left: none;
+    }
+
     .plans-grid {
         grid-template-columns: 1fr;
-        max-width: 480px;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 0;
+    }
+
+    .plan-card {
+        display: none;
+        border-radius: 0px 0px 2rem 2rem;
+    }
+
+    .plan-card.active-plan {
+        display: block;
+    }
+
+    .plan-card:hover {
+        transform: none;
+        box-shadow: none;
     }
 
     .addons-grid {
