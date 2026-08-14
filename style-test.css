@@ -293,8 +293,8 @@ body {
 }
 .service-card {
     background: var(--bg-200);
-    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     border: 1px solid var(--primary-200);
     border-radius: 2rem;
     padding: 2rem;

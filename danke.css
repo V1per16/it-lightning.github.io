@@ -1,0 +1,51 @@
+
+.thanks-page-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--bg-page);
+    padding: 3rem;
+    padding-top: 6rem;
+}
+
+.thanks-container {
+    text-align: center;
+    width: 100%;
+    max-width: 48rem;
+    padding: 3rem;
+    border-radius: var(--radius);
+    border-color: var(--border);
+    border-width: 1px;
+    background-color: var(--bg-card);
+    color: var(--text-white);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-bright);
+}
+
+.thanks-container p {
+    color: var(--text-primary);
+    margin-bottom: 3rem;
+}
+
+.back-btn {
+    background-color: var(--blue);
+    color: var(--text-primary);
+    text-align: center;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.back-btn:hover {
+    background-color: var(--blue-hover);
+    box-shadow: 0 0 10px 2px rgba(59, 130, 246, 0.35);
+}

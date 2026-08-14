@@ -48,7 +48,7 @@
     --green:            rgb(52, 178, 51);
     --red:              rgb(207, 16, 32);
     --border:           rgba(255, 255, 255, 0.1);
-    --radius:           1rem;
+    --radius:           2.25rem;
 }
 
 /* =============================================================
@@ -216,7 +216,7 @@ body,
     position: absolute;
     right: 1rem;
     top: 4rem;
-    background-color: rgba(31, 41, 55, 0.95);
+    background-color: var(--bg-card-alt);
     border-radius: 1rem;
     border-style: solid;
     border-color: var(--border);
@@ -262,6 +262,8 @@ body,
     margin-left: 0.5rem;
     font-size: 0.75rem;
     color: var(--text-white);
+    display: inline-block;
+    transition: transform .3s ease-in-out;
 }
 
 .nav-link-mobile.dropdown-toggle.active::after {
@@ -271,13 +273,19 @@ body,
 .mobile-menu .dropdown-menu {
     position: static;
     width: 100%;
-    background-color: rgb(45, 55, 71);
+    background-color: var(--bg-card-alt);
     box-shadow: none;
-    display: none;
+    
+    display: block;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height .3s ease-in-out, opacity .4s ease-in-out;
 }
 
 .mobile-menu .dropdown-menu.show {
-    display: block;
+    max-height: 500px; /* großzügig schätzen, größer als der tatsächliche Inhalt */
+    opacity: 1;
 }
 
 /* =============================================================
