@@ -17,7 +17,9 @@
     max-width: 48rem;
     padding: 2rem;
     border-radius: var(--radius);
-    background-color: var(--bg-card-dark);
+    border-color: var(--border);
+    border-width: 1px;
+    background-color: var(--bg-card);
     color: var(--text-white);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
@@ -41,31 +43,64 @@ form {
     height: 78px;
 }
 
+.send-btn {
+    background-color: var(--blue);
+    color: var(--text-primary);
+    text-align: center;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.send-btn:hover {
+    background-color: var(--blue-hover);
+    box-shadow: 0 0 10px 2px rgba(59, 130, 246, 0.35);
+    cursor: pointer;
+}
+
+.contact-input,
+.contact-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--checkmark-bg);
+    border-radius: 1rem;
+    outline: none;
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+    box-shadow: 0 0 0 2px var(--blue-bright);
+    transition: all 0.3s ease;
+}
+
 /* =============================================================
    RESPONSIVE
    ============================================================= */
 @media (max-width: 768px) {
     .contact-form-container {
         max-width: 90%;
-        padding: 1.5rem;
+        padding: 2rem;
     }
 
     .contact-form-container h1 {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
 }
 
 @media (max-width: 480px) {
     .contact-page-section {
-        padding: 2rem 0;
+        padding: 8rem 0;
     }
 
     .contact-form-container {
-        padding: 1rem;
+        padding: 1.5rem;
     }
 
     .contact-form-container h1 {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
     }
 
     form {
