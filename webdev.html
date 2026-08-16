@@ -15,13 +15,7 @@
                 <div class="nav-logo"><a href="index.html"><img src="logo_large.png" alt="IT-Lightning"></a></div>
                 <div class="nav-desktop">
                     <a href="index.html#home" class="nav-item">Home</a>
-                    <div class="nav-item dropdown">
-                        <span class="nav-link">Dienstleistungen</span>
-                        <div class="dropdown-menu">
-                            <a href="it-support.html" class="dropdown-item">IT-Support</a>
-                            <a href="webdev.html" class="dropdown-item">Webseiten</a>
-                        </div>
-                    </div>
+                    <a href="webdev.html" class="nav-item">Webseiten</a>
                     <a href="about.html" class="nav-item">Über mich</a>
                     <a href="kontakt.html" class="nav-item">Kontakt</a>
                 </div>
@@ -33,13 +27,7 @@
             </div>
             <div id="mobile-menu" class="mobile-menu hidden">
                 <a href="index.html#home" class="nav-item-mobile">Home</a>
-                <div class="nav-item-mobile dropdown">
-                    <span class="nav-link-mobile dropdown-toggle">Services</span>
-                    <div class="dropdown-menu hidden">
-                        <a href="it-support.html" class="dropdown-item">IT-Support</a>
-                        <a href="webdev.html" class="dropdown-item">Webseiten</a>
-                    </div>
-                </div>
+                <a href="webdev.html" class="nav-item-mobile">Webseiten</a>
                 <a href="about.html" class="nav-item-mobile">Über mich</a>
                 <a href="kontakt.html" class="nav-item-mobile">Kontakt</a>
             </div>
@@ -67,11 +55,15 @@
                     <a href="kontakt.html" class="wd-btn">Kostenloses Erstgespräch buchen</a>
                 </div>
             </div>
-            
-            <div class="tab-btns-wrapper">
-                <button class="tablinks" data-tab="basic-card" onclick="wrappedShowPlan(event, 'basic-card')">Basic</button>
-                <button class="tablinks" data-tab="klassik-card" onclick="wrappedShowPlan(event, 'klassik-card')">Klassik</button>
-                <button class="tablinks" data-tab="pro-card" onclick="wrappedShowPlan(event, 'pro-card')">Pro</button>
+
+            <div class="slide-tabs">
+                <input type="radio" id="radio-1" name="tabs" value="basic-card" checked>
+                <label class="tab" for="radio-1">Basic</label>
+                <input type="radio" id="radio-2" name="tabs" value="klassik-card">
+                <label class="tab" for="radio-2">Klassik</label>
+                <input type="radio" id="radio-3" name="tabs" value="pro-card">
+                <label class="tab" for="radio-3">Pro</label>
+                <span class="glider"></span>
             </div>
 
             <div class="plans-grid">
@@ -161,14 +153,14 @@
 
                 <div class="process-step">
                     <div class="step-number">2</div>
-                    <h3>Erstes Konzept (Figma)</h3>
-                    <p>Ich erstelle ein individuelles Grunddesign (ca. 4-6 Std.). Du siehst schon, wie deine Seite aussehen könnte - bevor du zahlst.</p>
+                    <h3>Erstes Konzept</h3>
+                    <p>Ich erstelle ein individuelles Grunddesign. Du siehst schon, wie deine Seite aussehen könnte - bevor du zahlst.</p>
                 </div>
 
                 <div class="process-step">
                     <div class="step-number">3</div>
                     <h3>Besprechung & Entscheidung</h3>
-                    <p>Wir gehen das Konzept durch. Gefällt es dir? Möchtest du eine Änderung? Bis hier hin entscheidest du ohne Kosten.</p>
+                    <p>Wir gehen das Konzept durch. Gefällt es dir? Möchtest du eine Änderung? <b>Bis hier hin</b> entscheidest du ohne Kosten.</p>
                 </div>
 
                 <div class="process-step">
@@ -231,40 +223,6 @@
             </div>
         </div>
 
-        <hr class="wd-divider">
-
-        <!-- PROS / CONS -->
-        <div class="wd-section">
-            <div class="wd-heading">
-                <h2>Alternative: Webseite von Grund auf selbst programmiert</h2>
-                <p>Pros und Cons einer vollständig selbst codierten Website.</p>
-            </div>
-            <div class="pros-cons-grid">
-                <div class="pc-col pros">
-                    <div class="pc-title">Vorteile</div>
-                    <div class="pc-item"><span class="marker">+</span>Vollständige Kontrolle über Code, Design und Funktionalität.</div>
-                    <div class="pc-item"><span class="marker">+</span>Kein Warten auf Tools oder Updates von Drittanbietern.</div>
-                    <div class="pc-item"><span class="marker">+</span>Anpassungen und Erweiterungen jederzeit möglich.</div>
-                    <div class="pc-item"><span class="marker">+</span>Keine Lizenz- oder Abonnementgebühren für CMS-Systeme.</div>
-                    <div class="pc-item"><span class="marker">+</span>Kein unnötiger Ballast durch externe Tools.</div>
-                    <div class="pc-item"><span class="marker">+</span>Komplett individuelle und einzigartige Websites möglich.</div>
-                    <div class="pc-item"><span class="marker">+</span>Volle Kontrolle über mobile Optimierung und Ladezeiten.</div>
-                    <div class="pc-item"><span class="marker">+</span>Unabhängigkeit von Drittanbietern und deren Updates.</div>
-                </div>
-                <div class="pc-col cons">
-                    <div class="pc-title">Nachteile</div>
-                    <div class="pc-item"><span class="marker">-</span>Komplex und erfordert umfassendes technisches Wissen.</div>
-                    <div class="pc-item"><span class="marker">-</span>Extrem zeitaufwändig, besonders bei grösseren Projekten.</div>
-                    <div class="pc-item"><span class="marker">-</span>Langfristige Skalierbarkeit schwierig bei suboptimalem Code.</div>
-                    <div class="pc-item"><span class="marker">-</span>Höhere indirekte Kosten durch den Zeitaufwand.</div>
-                    <div class="pc-item"><span class="marker">-</span>Höhere Wahrscheinlichkeit für Bugs und Sicherheitslücken.</div>
-                    <div class="pc-item"><span class="marker">-</span>Ohne Frameworks fehlt Zugang zu vorgefertigten Funktionen.</div>
-                    <div class="pc-item"><span class="marker">-</span>Manuelles Implementieren von responsivem Design ist aufwändig.</div>
-                    <div class="pc-item"><span class="marker">-</span>Alle Updates und Sicherheitsmassnahmen selbst durchführen.</div>
-                </div>
-            </div>
-        </div>
-
         <!-- Footer -->
         <footer class="footer">
             <p>© 2026 IT-Lightning. All rights reserved.</p>
@@ -282,58 +240,22 @@
                 panel.style.maxHeight = isOpen ? '0' : panel.scrollHeight + 'px';
             }
 
-            function showPlan(evt, tabname) {
-                if (window.innerWidth > 900) {
-                    return;
-                }
+            const radiogroup = document.querySelectorAll('input[name="tabs"]');
+            const boxen = document.querySelectorAll('.plan-card');
 
-                var i, tabcontent, tablinks;
-
-                tabcontent = document.getElementsByClassName("plan-card");
-                for (i = 0; i < tabcontent.length; i++) {
-                    tabcontent[i].classList.remove("active-plan");
-                }
-
-                tablinks = document.getElementsByClassName("tablinks");
-                for (i = 0; i < tablinks.length; i++) {
-                    tablinks[i].className = tablinks[i].className.replace(" active", "");
-                }
-
-                document.getElementById(tabname).classList.add("active-plan");
-
-                if (evt && evt.currentTarget) {
-                    evt.currentTarget.className += " active";
-                } else {
-                    for (i = 0; i < tablinks.length; i++) {
-                        if (tablinks[i].getAttribute("data-tab") === tabname) {
-                            tablinks[i].className += " active";
-                            break;
-                        }
+            radiogroup.forEach(radio => {
+                radio.addEventListener('change', (e) => {
+                    // Alle Boxen verstecken
+                    boxen.forEach(box => box.style.display = 'none');
+                    
+                    // Die ausgewählte Box anzeigen
+                    const aktiveBox = document.getElementById(e.target.value);
+                    if (aktiveBox) {
+                    aktiveBox.style.display = 'block';
                     }
-                }
-            }
-
-            // Track which tab is currently "selected" so we can restore it on resize
-            var currentTab = "basic-card";
-
-            function wrappedShowPlan(evt, tabname) {
-                currentTab = tabname;
-                showPlan(evt, tabname);
-            }
-
-            window.addEventListener("DOMContentLoaded", function () {
-                showPlan(null, currentTab);
+                });
             });
 
-            // Watch for the screen crossing the 900px breakpoint
-            var mobileQuery = window.matchMedia("(max-width: 900px)");
-
-            mobileQuery.addEventListener("change", function (e) {
-                if (e.matches) {
-                    // Just dropped below 900px — show the last active tab
-                    showPlan(null, currentTab);
-                }
-            });
         </script>
     </body>
 </html>
