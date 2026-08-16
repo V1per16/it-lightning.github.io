@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IT-Lightning - IT Support & Web Solutions</title>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            .slide-tabs {
+                display: flex;
+                position: relative;
+                background-color: var(--bg-card-hover);
+                box-shadow: inset 0 0 10px 1px var(--bg-card-darker);
+                padding: 4px;
+                border-radius: 999px;
+                max-width: 400px;
+                margin: 0 auto;
+                margin-bottom: 1rem;
+                margin-top: 50%;
+                transform: translateY(50%);
+            }
+            input[type="radio"] {
+                display: none;
+            }
+            .tab {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 40px;
+                width: 100%;
+                font-size: 0.9rem;
+                font-weight: 500;
+                border-radius: 99px;
+                cursor: pointer;
+                transition: color 0.15s ease-in;
+                z-index: 2;
+                color: var(--text-primary);
+            }
+            .glider {
+                position: absolute;
+                left: 1%;
+                display: flex;
+                height: 40px;
+                width: calc((100% - 8px) / 3);
+                background-color: #87a1ce1e;
+                z-index: 1;
+                border-radius: 99px;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.1), inset 0 0 15px 0 #8c9bb276;
+            }
+
+            @keyframes klassik-to-basic {
+                60%  { transform: translateX(45%)  scale(1.05, 0.9); }
+                75%  { transform: translateX(-18%) scale(0.96, 1.05); }
+                88%  { transform: translateX(9%)   scale(1.02, 0.98); }
+                100% { transform: translateX(0%)   scale(1, 1); }
+            }
+            @keyframes basic-to-klassik {
+                60%  { transform: translateX(145%) scale(1.05, 0.9); }
+                75%  { transform: translateX(82%)  scale(0.96, 1.05); }
+                88%  { transform: translateX(109%) scale(1.02, 0.98); }
+                100% { transform: translateX(100%) scale(1, 1); }
+            }
+            @keyframes basic-to-pro {
+                60%  { transform: translateX(245%) scale(1.05, 0.9); }
+                75%  { transform: translateX(182%) scale(0.96, 1.05); }
+                88%  { transform: translateX(209%) scale(1.02, 0.98); }
+                100% { transform: translateX(200%) scale(1, 1); }
+            }
+
+            input[id="radio-1"]:checked ~ .glider {
+                animation: klassik-to-basic 0.55s cubic-bezier(.34,1.56,.64,1) forwards;
+            }
+            input[id="radio-2"]:checked ~ .glider {
+                animation: basic-to-klassik 0.55s cubic-bezier(.34,1.56,.64,1) forwards;
+            }
+            input[id="radio-3"]:checked ~ .glider {
+                animation: basic-to-pro 0.55s cubic-bezier(.34,1.56,.64,1) forwards;
+            }
+            input:checked + label {
+                color: var(--blue-bright);
+                font-weight: 600;
+            }
+        </style>
+    </head>
+    <body class="site-body">
+        <div class="slide-tabs">
+            <input type="radio" id="radio-1" name="tabs" value="basic-card" checked>
+            <label class="tab" for="radio-1">Basic</label>
+            <input type="radio" id="radio-2" name="tabs" value="klassik-card">
+            <label class="tab" for="radio-2">Klassik</label>
+            <input type="radio" id="radio-3" name="tabs" value="pro-card">
+            <label class="tab" for="radio-3">Pro</label>
+            <span class="glider"></span>
+        </div>
+        <script src="script.js"></script>
+        <script>
+            function toggleAccordion(btn) {
+                const panel = btn.nextElementSibling;
+                const label = btn.querySelector('.accordion-label');
+                const isOpen = btn.classList.contains('open');
+                btn.classList.toggle('open', !isOpen);
+                label.textContent = isOpen ? 'Alle Details anzeigen' : 'Details ausblenden';
+                panel.style.maxHeight = isOpen ? '0' : panel.scrollHeight + 'px';
+            }
+
+            const radiogroup = document.querySelectorAll('input[name="tabs"]');
+            const boxen = document.querySelectorAll('.plan-card');
+
+            radiogroup.forEach(radio => {
+                radio.addEventListener('change', (e) => {
+                    // Alle Boxen verstecken
+                    boxen.forEach(box => box.style.display = 'none');
+                    
+                    // Die ausgewählte Box anzeigen
+                    const aktiveBox = document.getElementById(e.target.value);
+                    if (aktiveBox) {
+                    aktiveBox.style.display = 'block';
+                    }
+                });
+            });
+
+            // Remember the previous checked radio to determine the animation direction
+            const radios = document.querySelectorAll('.slide-tabs input[type="radio"]');
+            let previousId = document.querySelector('.slide-tabs input:checked')?.id ?? null;
+
+            radios.forEach(radio => {
+                radio.addEventListener('change', () => {
+                    const currentId = radio.id;
+                    console.log('was:', previousId, '-> now:', currentId);
+
+                    // e.g. tag the glider with direction for CSS to use
+                    const glider = document.querySelector('.glider');
+                    const prevNum = previousId ? parseInt(previousId.split('-')[1]) : null;
+                    const currNum = parseInt(currentId.split('-')[1]);
+                    glider.dataset.direction = prevNum === null || currNum > prevNum ? 'right' : 'left';
+
+                    previousId = currentId;
+                });
+            });
+
+        </script>
+    </body>
+</html>

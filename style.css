@@ -4,7 +4,7 @@
 :root {
     /* Backgrounds */
     --bg-body:          rgb(17, 24, 39);
-    --bg-page:          rgb(31, 41, 55);
+    --bg-page:          rgb(43, 51, 61);
     --bg-card:          rgba(55, 65, 81, 0.7);
     --bg-card-darker:   rgba(55, 65, 81, 0.3);
     --bg-card-alt:      rgb(55, 65, 81);
@@ -48,7 +48,7 @@
     --green:            rgb(52, 178, 51);
     --red:              rgb(207, 16, 32);
     --border:           rgba(255, 255, 255, 0.1);
-    --radius:           2.25rem;
+    --radius:           2rem;
 }
 
 /* =============================================================
