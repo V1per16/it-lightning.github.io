@@ -16,7 +16,7 @@ body,
 .wd-heading {
     text-align: center;
     margin-top: 3rem;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
 }
 
 .wd-heading h2 {
@@ -215,14 +215,13 @@ body,
 .process-step {
     background: var(--bg-card);
     border: 1px solid var(--border);
-    border-radius: 1rem;
-    padding: 1.75rem 1.5rem;
+    border-radius: 2rem;
+    padding: 1.5rem;
     position: relative;
-    transition: all 0.3s ease;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .process-step:hover {
-    transform: translateY(-2px);
     box-shadow: 0 0 10px 2px rgba(79, 79, 79, 0.35);
 }
 
@@ -241,6 +240,11 @@ body,
     font-weight: 700;
     font-size: 1.2rem;
     border: 3px solid var(--bg-page);
+    transition: all 0.5s cubic-bezier(.61,.01,.42,.99);
+}
+
+.process-step:hover .step-number {
+    transform: translateX(-60%) translateY(20%) scale(1.25);
 }
 
 .process-step h3 {
@@ -300,95 +304,30 @@ body,
 .addon-card-new {
     background: var(--bg-card);
     border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1.5rem;
-    transition: border-color 0.25s, transform 0.25s;
+    border-radius: 2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
 }
 
 .addon-card-new:hover {
-    border-color: rgba(59, 130, 246, 0.4);
     transform: translateY(-2px);
+    box-shadow: 0 0 20px 5px rgba(79, 79, 79, 0.35);
 }
 
 .addon-title-new {
     color: var(--blue-bright);
     font-weight: 600;
-    font-size: 0.95rem;
-    margin-bottom: 0.35rem;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
 }
 
 .addon-text-new {
     color: var(--text-muted);
-    font-size: 0.82rem;
+    font-size: 0.95rem;
     line-height: 1.55;
-}
-
-/* =============================================================
-   PROS / CONS
-   ============================================================= */
-.pros-cons-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    padding-bottom: 3rem;
-}
-
-.pc-col {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1.5rem;
-}
-
-.pc-col.pros {
-    border-top: 3px solid var(--green);
-}
-
-.pc-col.cons {
-    border-top: 3px solid var(--red);
-}
-
-.pc-title {
-    font-weight: 700;
-    font-size: 1rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-}
-
-.pc-col.pros .pc-title {
-    color: var(--green);
-}
-
-.pc-col.cons .pc-title {
-    color: var(--red);
-}
-
-.pc-item {
-    display: flex;
-    gap: 0.6rem;
-    padding: 0.55rem 0;
-    border-bottom: 1px solid var(--border);
-    font-size: 0.875rem;
-    color: var(--text-muted);
-}
-
-.pc-item:last-child {
-    border-bottom: none;
-}
-
-.pc-item .marker {
-    flex-shrink: 0;
-    font-weight: 700;
-    margin-top: 1px;
-}
-
-.pros .marker {
-    color: var(--green);
-}
-
-.cons .marker {
-    color: var(--red);
 }
 
 /* =============================================================
@@ -397,6 +336,7 @@ body,
 .wd-divider {
     border: none;
     border-top: 1px solid var(--border);
+    width: 80%;
     max-width: 1280px;
     margin: 0 auto;
 }
@@ -439,11 +379,11 @@ body,
         display: flex;
         height: 40px;
         width: calc((100% - 8px) / 3);
-        background-color: #87a1ce1e;
+        background-color: #d6dde81e;
         z-index: 1;
         border-radius: 99px;
         box-shadow: 0 1px 3px rgba(0,0,0,0.1), inset 0 0 15px 0 #7e8ca176;
-        transition: transform 0.5s ease-in-out; /* cubic-bezier(.45,-0.44,.6,1.3) */
+        transition: transform 0.4s ease-in-out; /* cubic-bezier(.45,-0.44,.6,1.3) */
     }
         input[id="radio-1"]:checked ~ .glider {
         transform: translateX(0%);
@@ -455,7 +395,7 @@ body,
         transform: translateX(200%);
     }
         input:checked + label {
-        color: var(--blue-bright);
+        color: #4f99ff;
         font-weight: 600;
     }
 

@@ -65,6 +65,7 @@ form {
 .contact-textarea {
     width: 100%;
     padding: 0.75rem;
+    padding-left: 1rem;
     background-color: var(--checkmark-bg);
     border-radius: 1rem;
     outline: none;

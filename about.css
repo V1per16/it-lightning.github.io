@@ -14,7 +14,7 @@
 #about-us-container {
     background: var(--bg-card);
     border: 1px solid var(--border);
-    border-radius: 1rem;
+    border-radius: 2rem;
     padding: 2rem;
     display: flex;
     justify-content: center;
@@ -26,7 +26,7 @@
 
 #about-us-container:hover {
     transform: translateY(-1px);
-    box-shadow: 0 0 20px 5px rgba(50, 50, 50, 0.35);
+    box-shadow: 0 0 20px 5px rgba(79, 79, 79, 0.35);
 }
 
 #about-us-container h3 {
@@ -52,6 +52,7 @@
     margin: 1.5rem auto 0;
     font-size: 1.125rem;
     line-height: 1.75rem;
+    text-align: center;
     color: var(--text-primary);
 }
 
